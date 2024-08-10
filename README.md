@@ -13,11 +13,19 @@
 > - **Regularly updated:** New decorations are added frequently.
 > - **Supports channel and video pages:** Show off your decorated avatar on both your channel and individual video pages.
 
-### :electron: Installation:
+### :electron: Installation (Userscript):
 > [!TIP]
 > 1. Install a browser extension manager like [Tampermonkey](https://www.tampermonkey.net/) or [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/).
 > 2. Click on the following link to install the script: [Install YouTube Avatar Decorations](https://update.greasyfork.org/scripts/503107/YouTube%20Avatar%20Decorations.user.js)
 > 3. Refresh your YouTube page.
+
+### :electron: Installation (Chrome Extension):
+> [!TIP]
+> 1. Download the [Youtube Avatars.rar](https://github.com/phaticusthiccy/YoutubeAvatars/raw/main/Youtube%20Avatars.rar)
+> 2. Extract the rar file.
+> 3. Go to the `chrome://extensions` page and enable the **Developer Mode** option on the top right.
+> 4. Click **Load Unpacked** and select the extracted folder.
+> * If you don't understand, you can watch the video by [clicking here.](https://www.youtube.com/watch?v=oswjtLwCUqg)
 
 ### :dependabot: How to Use:
 > [!IMPORTANT]
