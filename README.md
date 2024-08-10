@@ -2,8 +2,8 @@
 
 **YouTube Avatar Decorations** is a browser extension that allows you to customize your YouTube avatar with a variety of cool decorations. Choose from different categories like anime, animals, nature, mystic, and more to express yourself!
 
-[![Userscript](https://img.shields.io/greasyfork/dt/503107)](https://greasyfork.org/en/scripts/503107-youtube-avatar-decorations)
-[![Rating](https://img.shields.io/greasyfork/rating-count/503107)](https://greasyfork.org/en/scripts/503107-youtube-avatar-decorations)
+[![Userscript](https://img.shields.io/greasyfork/dt/503107?label=Greasy%20Fork%20Downloads)](https://greasyfork.org/en/scripts/503107-youtube-avatar-decorations)
+[![Rating](https://img.shields.io/greasyfork/rating-count/503107?label=Greasy%20Fork%20Rating)](https://greasyfork.org/en/scripts/503107-youtube-avatar-decorations)
 
 ### Features:
 > [!NOTE]
