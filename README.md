@@ -28,19 +28,23 @@
 > 5. Your avatar will be automatically updated with the chosen decoration.
 > 6. To remove the decoration, simply select the "Remove" option in the menu.
 
-### :wales: Contributing:
-
-Contributions are welcome! If you have any ideas for new decorations, feel free to submit a pull request or open an issue on GitHub.
-
 ### :new: Keeping Up-to-date
 > [!CAUTION]
 > * The [youtube_avatar_decorations.js](youtube_avatar_decorations.js) file in the repository __may not be up to date!__
 > * To use the latest version, please visit [Greasy Fork](https://greasyfork.org/tr/scripts/503107-youtube-avatar-decorations) or [OpenUserJS](https://openuserjs.org/scripts/phaticusthiccy/YouTube_Avatar_Decorations/issues)!
 
+---
+
+### :wales: Contributing:
+Contributions are welcome! If you have any ideas for new decorations, feel free to submit a pull request or open an issue on GitHub.
+
+---
+
 ### :movie_camera: Demo Showcase
 https://github.com/user-attachments/assets/af5a6cf2-bce4-47ad-a2ab-b296ce65ec93
 
-### :page_with_curl: License:
+---
 
+### :page_with_curl: License:
 This project is licensed under the MIT License.
 
