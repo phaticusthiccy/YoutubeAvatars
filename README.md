@@ -34,8 +34,11 @@ Contributions are welcome! If you have any ideas for new decorations, feel free 
 
 ### Keeping Up-to-date
 > [!CAUTION]
-> 1. The [youtube_avatar_decorations.js](youtube_avatar_decorations.js) file in the repository __may not be up to date!__
-> 2. To use the latest version, please visit [Greasy Fork](https://greasyfork.org/tr/scripts/503107-youtube-avatar-decorations) or [OpenUserJS](https://openuserjs.org/scripts/phaticusthiccy/YouTube_Avatar_Decorations/issues)!
+> * The [youtube_avatar_decorations.js](youtube_avatar_decorations.js) file in the repository __may not be up to date!__
+> * To use the latest version, please visit [Greasy Fork](https://greasyfork.org/tr/scripts/503107-youtube-avatar-decorations) or [OpenUserJS](https://openuserjs.org/scripts/phaticusthiccy/YouTube_Avatar_Decorations/issues)!
+
+### Demo Showcase
+https://github.com/user-attachments/assets/af5a6cf2-bce4-47ad-a2ab-b296ce65ec93
 
 ### License:
 
