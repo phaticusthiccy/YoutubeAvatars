@@ -13,7 +13,7 @@
 // @name:ta             YouTube அவதார் அலங்காரங்கள்
 // @license             MIT
 // @namespace           http://tampermonkey.net/
-// @version             0.9
+// @version             1.0
 // @description         YouTube Avatars enhances the visual experience on YouTube by allowing users to customize their avatars on both channel and video pages.
 // @description:tr      YouTube Avatarları, kullanıcıların hem kanal hem de video sayfalarında avatarlarını özelleştirmelerine olanak tanıyarak YouTube'daki görsel deneyimi geliştirir.
 // @description:de      YouTube-Avatare verbessern das visuelle Erlebnis auf YouTube, indem sie es Benutzern ermöglichen, ihre Avatare sowohl auf Kanal- als auch auf Videoseiten anzupassen.
@@ -32,6 +32,8 @@
 // @supportURL          https://github.com/phaticusthiccy/YoutubeAvatars/issues/new
 // @homepageURL         https://github.com/phaticusthiccy/YoutubeAvatars
 // @grant               none
+// @downloadURL         https://update.greasyfork.org/scripts/503107/YouTube%20Avatar%20Decorations.user.js
+// @updateURL           https://update.greasyfork.org/scripts/503107/YouTube%20Avatar%20Decorations.meta.js
 // ==/UserScript==
 
 (function() {
@@ -48,6 +50,7 @@
             { name: "Rainy Mood", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=96&passthrough=true" },
             { name: "Doodle", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_5873ecaa76fb549654b40095293f902e.png?size=96&passthrough=true" },
             { name: "Green Smoke", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_10b9f886b513b77ccdd67c8784f1a496.png?size=96&passthrough=true" },
+            { name: "Victory", url: "https://github.com/phaticusthiccy/phaticusthiccy/blob/main/youtube_animated_avatars/Animation-1723308469539-ezgif.com-optipng.png?raw=true", scale: 1.21 },
         ],
         "Animals": [
             { name: "Cat Ears", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c3cffc19e9784f7d0b005eecdf1b566e.png?size=96&passthrough=true" },
@@ -62,6 +65,7 @@
             { name: "Starts", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_d72066b8cecbadd9fc951913ebcc384f.png?size=96&passthrough=true" },
             { name: "Soul", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c3c09bd122898be35093d0d59850f627.png?size=96&passthrough=true" },
             { name: "Sweat Drops", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_55c9d0354290afa8b7fe47ea9bd7dbcf.png?size=96&passthrough=true" },
+
         ],
         "Nature": [
             { name: "Flower Clouds", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_d9ff5ff133ed9176895a4a2b5e58f1b8.png?size=96&passthrough=true" },
@@ -80,7 +84,10 @@
             { name: "Spirit Sparks", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_1005898c6acf56a9ac5010baf444f6fd.png?size=96&passthrough=true" },
             { name: "Skull Medallion", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_9d67a1cbf81fe7197c871e94f619b04b.png?size=96&passthrough=true" },
             { name: "The Wand", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_db9baf0ba7cf449d2b027c06309dbe8d.png?size=96&passthrough=true" },
-            { name: "Fairies", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_fe3c76cac2adf426832a7e495e8329d3.png?size=96&passthrough=true" }
+            { name: "Fairies", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_fe3c76cac2adf426832a7e495e8329d3.png?size=96&passthrough=true" },
+            { name: "Blue Yonder", url: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/917950/9155ed2050954e8bd0e74f0f0dcfa0e96b37ec34.png" },
+            { name: "Sparkles", url: "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1192640/6b555763a9ff0815cff7d45480f03ff4d1ca4ab3.png" },
+            { name: "Divination", url: "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2271980/2727a0bbab23f6ecc60b86b2f4946bd31d986165.png" },
         ],
         "Games": [
             { name: "Valorant - Viper", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_62cd9d7c0031a7c1eb5ad5cc96992189.png?size=96&passthrough=true" },
@@ -95,10 +102,15 @@
             { name: "Palworld - Cattiva", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_d260c70fa8f38c499fa452c3cbdc5a0c.png?size=96&passthrough=true" },
             { name: "Palworld - Lamball", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_949a575b693c81ced8f56a7579d0969f.png?size=96&passthrough=true" },
             { name: "Palworld - Depresso", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_b7e2813fb97fe05b0f9f29a1bb7fde41.png?size=96&passthrough=true" },
-            { name: "Palworld - Selyne", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_0830085f29712a6f3a23a123302050b4.png?size=96&passthrough=true" }
+            { name: "Palworld - Selyne", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_0830085f29712a6f3a23a123302050b4.png?size=96&passthrough=true" },
+            { name: "Starfield - Grav Wave", url: "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1716740/ff0e84c4996b1c9cb299ba2ab1c6454c5d129b49.png" },
+            { name: "Genshin - Little Matron", url: "https://upload-os-bbs.hoyolab.com/upload/2024/07/22/d070e73b57eebc782658856f83400c0f_4985728381431752077.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" },
+            { name: "Genshin - Lumine", url: "https://fastcdn.hoyoverse.com/static-resource-v2/2024/04/10/e0c33a668dfe55c3d28c153fd26d2566_7549684827555419407.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" },
+            { name: "Honkai - Zhu Yuan", url: "https://upload-os-bbs.hoyolab.com/upload/2024/07/23/1b34e54ec5ac3fbe67c079dd29c5f632_5221289561156079104.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" },
+            { name: "Honkai - Ellen", url: "https://upload-os-bbs.hoyolab.com/upload/2024/07/04/98126629588606c7ed379693c30b8c6c_1697937515325313185.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" }
         ],
         "Experimental": [
-            { name: "Valorant - Clove HQ", url: "https://github.com/phaticusthiccy/phaticusthiccy/blob/main/youtube_animated_avatars/clove_2.gif?raw=true" },
+            { name: "Valorant - Clove HQ", url: "https://github.com/phaticusthiccy/phaticusthiccy/blob/main/youtube_animated_avatars/clove_2.gif?raw=true", top: "-10px" },
             { name: "Magic HQ", url: "https://github.com/phaticusthiccy/phaticusthiccy/blob/main/youtube_animated_avatars/magic.gif?raw=true" }
         ]
     };
@@ -391,6 +403,13 @@
 
     function applyChannelAvatar(url) {
         const avatarShape = document.querySelector('yt-avatar-shape');
+        const findAvatarByURL = (url) => {
+            for (const category in avatarCategories) {
+                const avatar = avatarCategories[category].find((avatar) => avatar.url === url);
+                if (avatar) return avatar;
+            }
+            return {};
+        };
         if (avatarShape) {
             let gifWrapper = avatarShape.querySelector('#gif-wrapper');
             if (!gifWrapper) {
@@ -405,11 +424,12 @@
                 const gifElement = document.createElement('img');
                 gifElement.id = 'gif-element';
                 gifElement.style.position = 'absolute';
-                gifElement.style.top = '0';
+                gifElement.style.top = findAvatarByURL(url).top == undefined ? "0" : String(findAvatarByURL(url).top);
                 gifElement.style.left = '0';
                 gifElement.style.width = '100%';
                 gifElement.style.height = '100%';
                 gifElement.style.zIndex = '10';
+                gifElement.style.scale = findAvatarByURL(url).scale == undefined ? 'none' : String(findAvatarByURL(url).scale);
 
                 gifWrapper.appendChild(gifElement);
                 avatarShape.insertBefore(gifWrapper, avatarShape.firstChild);
@@ -417,6 +437,8 @@
             const gifElement = gifWrapper.querySelector('#gif-element');
             if (gifElement.src !== url) {
                 gifElement.src = url;
+                gifElement.style.scale = findAvatarByURL(url).scale == undefined ? 'none' : String(findAvatarByURL(url).scale);
+                gifElement.style.top = findAvatarByURL(url).top == undefined ? "0" : String(findAvatarByURL(url).top);
             }
         }
     }
@@ -676,6 +698,8 @@
     }
 
     function onUrlChange() {
+        if (!isValidUrl()) return;
+        location.reload(true);
         const selectedAvatar = getSelectedAvatar();
         if (selectedAvatar) {
             applyAvatar(selectedAvatar);
@@ -713,4 +737,4 @@
     setInterval(checkAndApplyChannelAvatar, 500);
     init();
     window.addEventListener('load', init);
-})()
+})();
