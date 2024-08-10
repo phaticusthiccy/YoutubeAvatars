@@ -43,6 +43,10 @@ Contributions are welcome! If you have any ideas for new decorations, feel free 
 ### :movie_camera: Demo Showcase
 https://github.com/user-attachments/assets/af5a6cf2-bce4-47ad-a2ab-b296ce65ec93
 
+![SS](https://github.com/user-attachments/assets/6fccbb63-aac2-42e2-97c1-d73cfc64074a)
+***
+![SS](https://github.com/user-attachments/assets/a9feeecd-c6f4-4142-939a-fb02cf405f35)
+
 ---
 
 ### :page_with_curl: License:
