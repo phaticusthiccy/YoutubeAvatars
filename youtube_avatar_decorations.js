@@ -13,7 +13,7 @@
 // @name:ta             YouTube அவதார் அலங்காரங்கள்
 // @license             MIT
 // @namespace           http://tampermonkey.net/
-// @version             1.0
+// @version             1.1
 // @description         YouTube Avatars enhances the visual experience on YouTube by allowing users to customize their avatars on both channel and video pages.
 // @description:tr      YouTube Avatarları, kullanıcıların hem kanal hem de video sayfalarında avatarlarını özelleştirmelerine olanak tanıyarak YouTube'daki görsel deneyimi geliştirir.
 // @description:de      YouTube-Avatare verbessern das visuelle Erlebnis auf YouTube, indem sie es Benutzern ermöglichen, ihre Avatare sowohl auf Kanal- als auch auf Videoseiten anzupassen.
@@ -32,8 +32,8 @@
 // @supportURL          https://github.com/phaticusthiccy/YoutubeAvatars/issues/new
 // @homepageURL         https://github.com/phaticusthiccy/YoutubeAvatars
 // @grant               none
-// @downloadURL         https://update.greasyfork.org/scripts/503107/YouTube%20Avatar%20Decorations.user.js
-// @updateURL           https://update.greasyfork.org/scripts/503107/YouTube%20Avatar%20Decorations.meta.js
+// @downloadURL https://update.greasyfork.org/scripts/503107/YouTube%20Avatar%20Decorations.user.js
+// @updateURL https://update.greasyfork.org/scripts/503107/YouTube%20Avatar%20Decorations.meta.js
 // ==/UserScript==
 
 (function() {
@@ -50,7 +50,10 @@
             { name: "Rainy Mood", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_e8c11f139e55dac538cdaafb3caa2317.png?size=96&passthrough=true" },
             { name: "Doodle", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_5873ecaa76fb549654b40095293f902e.png?size=96&passthrough=true" },
             { name: "Green Smoke", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_10b9f886b513b77ccdd67c8784f1a496.png?size=96&passthrough=true" },
-            { name: "Victory", url: "https://github.com/phaticusthiccy/phaticusthiccy/blob/main/youtube_animated_avatars/Animation-1723308469539-ezgif.com-optipng.png?raw=true", scale: 1.21 },
+            { name: "Victory", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/Animation-1723308469539-ezgif.com-optipng.png", scale: 1.21 },
+            { name: "Strings", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/strings.png", scale: 1.5 },
+            { name: "Sketch Hat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/hat.png" },
+            { name: "Robin Hood Hat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/robin_hood.png?raw=true" },
         ],
         "Animals": [
             { name: "Cat Ears", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c3cffc19e9784f7d0b005eecdf1b566e.png?size=96&passthrough=true" },
@@ -65,6 +68,7 @@
             { name: "Starts", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_d72066b8cecbadd9fc951913ebcc384f.png?size=96&passthrough=true" },
             { name: "Soul", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c3c09bd122898be35093d0d59850f627.png?size=96&passthrough=true" },
             { name: "Sweat Drops", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_55c9d0354290afa8b7fe47ea9bd7dbcf.png?size=96&passthrough=true" },
+            { name: "Cat Hat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/cat_hat.png?raw=true" },
 
         ],
         "Nature": [
@@ -78,7 +82,9 @@
             { name: "Lightening", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_365eed4178528fe8293c4212e8e2d5cb.png?size=96&passthrough=true" },
             { name: "Constellations", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_8552f9857793aed0cf816f370e2df3be.png?size=96&passthrough=true" },
             { name: "Blackhole", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_6d16b27d9415cafe3b289053644337c4.png?size=96&passthrough=true" },
-            { name: "UFO", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_6fdbddb6229453eac3bbb212edf5cd1c.png?size=96&passthrough=true" }
+            { name: "UFO", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_6fdbddb6229453eac3bbb212edf5cd1c.png?size=96&passthrough=true" },
+            { name: "Neon Star", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/rotating_star.png?raw=true" },
+            { name: "Daisy Ring", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/daisy_ring.png?raw=true" },
         ],
         "Mystic": [
             { name: "Spirit Sparks", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_1005898c6acf56a9ac5010baf444f6fd.png?size=96&passthrough=true" },
@@ -88,6 +94,10 @@
             { name: "Blue Yonder", url: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/917950/9155ed2050954e8bd0e74f0f0dcfa0e96b37ec34.png" },
             { name: "Sparkles", url: "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1192640/6b555763a9ff0815cff7d45480f03ff4d1ca4ab3.png" },
             { name: "Divination", url: "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2271980/2727a0bbab23f6ecc60b86b2f4946bd31d986165.png" },
+            { name: "Energy Ball", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/energy_ball.png" },
+            { name: "Eyes", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/eyes.png?raw=true" },
+            { name: "Devil", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/devil.png?raw=true" },
+            { name: "Shining Star", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/final_light.png?raw=true" },
         ],
         "Games": [
             { name: "Valorant - Viper", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_62cd9d7c0031a7c1eb5ad5cc96992189.png?size=96&passthrough=true" },
@@ -109,9 +119,27 @@
             { name: "Honkai - Zhu Yuan", url: "https://upload-os-bbs.hoyolab.com/upload/2024/07/23/1b34e54ec5ac3fbe67c079dd29c5f632_5221289561156079104.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" },
             { name: "Honkai - Ellen", url: "https://upload-os-bbs.hoyolab.com/upload/2024/07/04/98126629588606c7ed379693c30b8c6c_1697937515325313185.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" }
         ],
+        "Static Frames": [
+            { name: "Neon 1", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/static1.png" },
+            { name: "Neon 2", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/static2.png", scale: 1.21 },
+            { name: "Neon 3", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/static3.png", top: "5px", scale: 1.1, onlyChannel: true, videoTop: "-8px" },
+            { name: "DTCQ", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/static5.png", top: "5px", scale: 1.1, onlyChannel: true, videoTop: "-8px" },
+            { name: "Lilith", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/static6.png" },
+            { name: "Valentine", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/static7.png", scale: 1.1 },
+            { name: "Jellyfish", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/jelly.png" },
+            { name: "Burger", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/burger.png", scale: 1.19, dontScaleVideos: true },
+            { name: "Glitch 1", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/glitch.png", scale: 1.3 },
+            { name: "Glitch 2", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/glitch2.png", scale: 1.3 },
+            { name: "Cute Doodles", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/cute_doodles.png", scale: 1.4 },
+            { name: "Love Letter", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/love_letter.png", scale: 1.4 },
+            { name: "Pink Ribbon", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/ribbon.png", scale: 1.1 },
+            { name: "Arrival Movie 1", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/arrival.png", scale: 1.2, onlyChannel: true, top: "4px", left: "4px", darkMode: true },
+            { name: "Arrival Movie 2", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/arrival2.png", scale: 1.1, onlyChannel: true, top: "7px", darkMode: true },
+            { name: "Arrival Movie 3", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/arrival3.png", scale: 1.2, left: "5px", darkMode: true }
+        ],
         "Experimental": [
-            { name: "Valorant - Clove HQ", url: "https://github.com/phaticusthiccy/phaticusthiccy/blob/main/youtube_animated_avatars/clove_2.gif?raw=true", top: "-10px" },
-            { name: "Magic HQ", url: "https://github.com/phaticusthiccy/phaticusthiccy/blob/main/youtube_animated_avatars/magic.gif?raw=true" }
+            { name: "Valorant - Clove HQ", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/clove_2.gif", top: "-10px" },
+            { name: "Magic HQ", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/magic.gif", top: "-12px", scale: 1.3 }
         ]
     };
 
@@ -121,6 +149,7 @@
 
     let selectedAvatarUrl = localStorage.getItem('selectedAvatar') || '';
     let selectedCategory = ""
+
     function saveSelectedAvatar(url, category) {
         localStorage.setItem('selectedAvatar', url);
         localStorage.setItem('selectedMenu', category);
@@ -149,6 +178,33 @@
         const currentUrl = document.location.href.split(".com/")[1];
         return currentUrl.startsWith("@") || currentUrl.startsWith("c/");
     }
+
+    function isYouTubeDarkMode() {
+        try {
+            function isDarkColor(color) {
+                const rgb = color.match(/\d+/g);
+                if (rgb) {
+                    const [r, g, b] = rgb.map(Number);
+                    const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+                    return brightness < 128;
+                }
+                return false;
+            }
+
+            const appContainer = document.querySelector('ytd-app');
+            if (appContainer) {
+                const bgColor = window.getComputedStyle(appContainer).backgroundColor;
+                return isDarkColor(bgColor);
+            }
+
+            const bodyBgColor = window.getComputedStyle(document.body).backgroundColor;
+            return isDarkColor(bodyBgColor);
+        } catch {
+            return false
+        }
+    }
+
+    var searchTerm = ""
 
     function createMenu(idName = "") {
         /*if (document.getElementById('avatar-menu2')) {
@@ -179,9 +235,54 @@
         menu.style.overflowX = 'hidden';
         menu.style.minWidth = '250px';
         menu.style.fontSize = '14px';
-
-
         menu.style.userSelect = 'none';
+
+
+        const searchInput = document.createElement('input');
+        searchInput.type = 'text';
+        searchInput.placeholder = 'Search Effect...';
+        searchInput.style.width = '100%';
+        searchInput.style.padding = '10px';
+        searchInput.style.marginBottom = '10px';
+        searchInput.style.minWidth = '250px';
+        searchInput.style.border = 'none';
+        searchInput.style.outline = 'none';
+        searchInput.style.boxShadow = 'none';
+
+        searchInput.addEventListener('focus', () => {
+            searchInput.style.border = 'none';
+            searchInput.style.outline = 'none';
+            searchInput.style.boxShadow = 'none';
+        });
+
+        searchInput.addEventListener('blur', () => {
+            searchInput.style.border = 'none';
+            searchInput.style.outline = 'none';
+            searchInput.style.boxShadow = 'none';
+        });
+
+
+        searchInput.addEventListener('input', (event) => {
+            const searchTerm = event.target.value.toLowerCase();
+            menu.querySelectorAll('div > div > div').forEach((item) => {
+                if (searchTerm === '') {
+                    item.style.display = '';
+                    item.parentElement.style.display = 'none';
+                    item.parentElement.parentElement.style.display = 'block';
+                    //item.parentElement.parentElement.children[1].style.display = 'none';
+                } else if (item.textContent.toLowerCase().includes(searchTerm)) {
+                    item.style.display = "block"
+                    item.parentElement.style.display = 'block';
+                    item.parentElement.parentElement.style.display = 'block';
+                    item.parentElement.parentElement.children[1].style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        menu.insertBefore(searchInput, menu.firstChild);
+
         const selectedAvatar = getSelectedAvatar();
         const selectedCategory = getSelectedMenu();
 
@@ -208,13 +309,6 @@
             avatarList.style.paddingLeft = '15px';
 
             categoryTitle.addEventListener('click', (event) => {
-                menu.querySelectorAll('div > div').forEach((item) => {
-                    if (item !== avatarList && item.style.display === 'block') {
-                        item.style.display = 'none';
-                        item.previousElementSibling.style.color = '';
-                    }
-                });
-
                 avatarList.style.display = avatarList.style.display === 'none' ? 'block' : 'none';
                 event.stopPropagation();
             });
@@ -233,12 +327,17 @@
                 avatarName.textContent = avatar.name;
                 avatarName.style.flexGrow = '1';
 
+
                 const previewImg = document.createElement('img');
                 previewImg.style.width = '30px';
                 previewImg.style.height = '30px';
                 previewImg.style.marginLeft = '20px';
                 previewImg.style.marginRight = '25px';
                 previewImg.style.display = 'none';
+                previewImg.style.position = 'absolute';
+                previewImg.style.right = '0';
+                previewImg.style.top = '50%';
+                previewImg.style.transform = 'translateY(-50%)';
 
                 item.appendChild(avatarName);
                 item.appendChild(previewImg);
@@ -388,7 +487,7 @@
                 }
             }
         }
-        return null;  // Eğer URL bulunamazsa
+        return null;
     }
 
     function applyAvatar(url) {
@@ -411,6 +510,13 @@
             return {};
         };
         if (avatarShape) {
+
+            var channelFind = findAvatarByURL(url)
+            var channelTop = channelFind.top == undefined ? "0" : String(channelFind.top);
+            var channelScale = channelFind.scale == undefined ? 'none' : String(channelFind.scale);
+            var channelFilter = channelFind.darkMode == true ? isYouTubeDarkMode() == true ? "invert(1)" : "none" : "none"
+            var channelLeft = channelFind.left == undefined ? '0' : String(channelFind.left);
+
             let gifWrapper = avatarShape.querySelector('#gif-wrapper');
             if (!gifWrapper) {
                 gifWrapper = document.createElement('div');
@@ -424,12 +530,13 @@
                 const gifElement = document.createElement('img');
                 gifElement.id = 'gif-element';
                 gifElement.style.position = 'absolute';
-                gifElement.style.top = findAvatarByURL(url).top == undefined ? "0" : String(findAvatarByURL(url).top);
-                gifElement.style.left = '0';
+                gifElement.style.top = channelTop
+                gifElement.style.left = channelLeft
                 gifElement.style.width = '100%';
                 gifElement.style.height = '100%';
                 gifElement.style.zIndex = '10';
-                gifElement.style.scale = findAvatarByURL(url).scale == undefined ? 'none' : String(findAvatarByURL(url).scale);
+                gifElement.style.scale = channelScale
+                gifElement.style.filter = channelFilter
 
                 gifWrapper.appendChild(gifElement);
                 avatarShape.insertBefore(gifWrapper, avatarShape.firstChild);
@@ -437,14 +544,29 @@
             const gifElement = gifWrapper.querySelector('#gif-element');
             if (gifElement.src !== url) {
                 gifElement.src = url;
-                gifElement.style.scale = findAvatarByURL(url).scale == undefined ? 'none' : String(findAvatarByURL(url).scale);
-                gifElement.style.top = findAvatarByURL(url).top == undefined ? "0" : String(findAvatarByURL(url).top);
+                gifElement.style.scale = channelScale
+                gifElement.style.top = channelTop
+                gifElement.style.filter = channelFilter
+                gifElement.style.left = channelLeft
             }
         }
     }
 
     function applyVideoAvatar(url) {
+        const findAvatarByURL = (url) => {
+            for (const category in avatarCategories) {
+                const avatar = avatarCategories[category].find((avatar) => avatar.url === url);
+                if (avatar) return avatar;
+            }
+            return {};
+        };
         const avatar = document.querySelector('#avatar');
+
+        var objectAvatar = findAvatarByURL(url)
+        var videoTop = objectAvatar.top == undefined ? "-10px" : objectAvatar.onlyChannel == true ? objectAvatar.videoTop == undefined ? "-10px" : objectAvatar.videoTop : String(objectAvatar.top);
+        var videoScale = objectAvatar.scale == undefined ? 'none' : objectAvatar.dontScaleVideos == true ? 'none' : String(objectAvatar.scale);
+        var videoFilter = objectAvatar.darkMode == true ? isYouTubeDarkMode() == true ? "invert(1)" : "none" : "none"
+
         if (avatar) {
             let uploadInfo = document.querySelector('#upload-info');
             if (uploadInfo) {
@@ -464,11 +586,13 @@
                 let gifElement = document.createElement('img');
                 gifElement.id = 'gif-element';
                 gifElement.style.position = 'absolute';
-                gifElement.style.top = '-10px';
                 gifElement.style.left = '-10px';
                 gifElement.style.width = '60px';
                 gifElement.style.height = '60px';
                 gifElement.style.zIndex = '10';
+                gifElement.style.scale = videoScale
+                gifElement.style.top = videoTop
+                gifElement.style.filter = videoFilter
 
                 gifWrapper.appendChild(gifElement);
                 avatar.parentElement.insertBefore(gifWrapper, avatar);
@@ -477,6 +601,9 @@
             let gifElement = document.querySelector('#gif-element');
             if (gifElement.src !== url) {
                 gifElement.src = url;
+                gifElement.style.scale = videoScale
+                gifElement.style.top = videoTop
+                gifElement.style.filter = videoFilter
             }
         }
 
@@ -500,11 +627,13 @@
                 let gifElement = document.createElement('img');
                 gifElement.id = 'gif-element';
                 gifElement.style.position = 'absolute';
-                gifElement.style.top = '-10px';
                 gifElement.style.left = '-10px';
                 gifElement.style.width = '60px';
                 gifElement.style.height = '60px';
                 gifElement.style.zIndex = '10';
+                gifElement.style.scale = videoScale
+                gifElement.style.top = videoTop
+                gifElement.style.filter = videoFilter
 
                 gifWrapper.appendChild(gifElement);
                 avatar2.parentElement.insertBefore(gifWrapper, avatar2);
@@ -513,6 +642,9 @@
             let gifElement = document.querySelector('#gif-element');
             if (gifElement.src !== url) {
                 gifElement.src = url;
+                gifElement.style.scale = videoScale
+                gifElement.style.top = videoTop
+                gifElement.style.filter = videoFilter
             }
         }
 
@@ -536,11 +668,13 @@
                 let gifElement = document.createElement('img');
                 gifElement.id = 'gif-element';
                 gifElement.style.position = 'absolute';
-                gifElement.style.top = '-10px';
                 gifElement.style.left = '-10px';
                 gifElement.style.width = '60px';
                 gifElement.style.height = '60px';
                 gifElement.style.zIndex = '10';
+                gifElement.style.scale = videoScale
+                gifElement.style.top = videoTop
+                gifElement.style.filter = videoFilter
 
                 gifWrapper.appendChild(gifElement);
                 avatar3.parentElement.insertBefore(gifWrapper, avatar3);
@@ -549,6 +683,9 @@
             let gifElement = document.querySelector('#gif-element');
             if (gifElement.src !== url) {
                 gifElement.src = url;
+                gifElement.style.scale = videoScale
+                gifElement.style.top = videoTop
+                gifElement.style.filter = videoFilter
             }
         }
     }
@@ -699,6 +836,7 @@
 
     function onUrlChange() {
         if (!isValidUrl()) return;
+        console.log("ok")
         location.reload(true);
         const selectedAvatar = getSelectedAvatar();
         if (selectedAvatar) {
@@ -734,7 +872,7 @@
         }
     }
 
-    setInterval(checkAndApplyChannelAvatar, 500);
+    //setInterval(checkAndApplyChannelAvatar, 500);
     init();
     window.addEventListener('load', init);
 })();
