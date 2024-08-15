@@ -13,7 +13,7 @@
 // @name:ta             YouTube அவதார் அலங்காரங்கள்
 // @license             MIT
 // @namespace           http://tampermonkey.net/
-// @version             1.1
+// @version             1.3
 // @description         YouTube Avatars enhances the visual experience on YouTube by allowing users to customize their avatars on both channel and video pages.
 // @description:tr      YouTube Avatarları, kullanıcıların hem kanal hem de video sayfalarında avatarlarını özelleştirmelerine olanak tanıyarak YouTube'daki görsel deneyimi geliştirir.
 // @description:de      YouTube-Avatare verbessern das visuelle Erlebnis auf YouTube, indem sie es Benutzern ermöglichen, ihre Avatare sowohl auf Kanal- als auch auf Videoseiten anzupassen.
@@ -54,10 +54,13 @@
             { name: "Strings", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/strings.png", scale: 1.5 },
             { name: "Sketch Hat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/hat.png" },
             { name: "Robin Hood Hat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/robin_hood.png?raw=true" },
+            { name: "Devil Horns", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/devil_horn.png" },
         ],
         "Animals": [
             { name: "Cat Ears", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c3cffc19e9784f7d0b005eecdf1b566e.png?size=96&passthrough=true" },
             { name: "Sleepy Cat", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=96&passthrough=true" },
+            { name: "Blob Cat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/blobcat.gif" },
+            { name: "Space Whale", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/spcae_whale.gif", scale: 1.03 },
         ],
         "Anime": [
             { name: "Flying Hearts", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_8ffa2ba9bff18e96b76c2e66fd0d7fa3.png?size=96&passthrough=true" },
@@ -69,7 +72,6 @@
             { name: "Soul", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c3c09bd122898be35093d0d59850f627.png?size=96&passthrough=true" },
             { name: "Sweat Drops", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_55c9d0354290afa8b7fe47ea9bd7dbcf.png?size=96&passthrough=true" },
             { name: "Cat Hat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/cat_hat.png?raw=true" },
-
         ],
         "Nature": [
             { name: "Flower Clouds", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_d9ff5ff133ed9176895a4a2b5e58f1b8.png?size=96&passthrough=true" },
@@ -85,6 +87,8 @@
             { name: "UFO", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_6fdbddb6229453eac3bbb212edf5cd1c.png?size=96&passthrough=true" },
             { name: "Neon Star", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/rotating_star.png?raw=true" },
             { name: "Daisy Ring", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/daisy_ring.png?raw=true" },
+            { name: "Fire", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/circle_fire.gif?raw=true", scale: 1.7 },
+            { name: "Roses", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/roses.gif?raw=true" }
         ],
         "Mystic": [
             { name: "Spirit Sparks", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_1005898c6acf56a9ac5010baf444f6fd.png?size=96&passthrough=true" },
@@ -98,6 +102,8 @@
             { name: "Eyes", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/eyes.png?raw=true" },
             { name: "Devil", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/devil.png?raw=true" },
             { name: "Shining Star", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/final_light.png?raw=true" },
+            { name: "Aetheria", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/aetheria2.gif?raw=true", scale: 1.4, videoScale: 1.2 },
+            { name: "Shining Star 2", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/stars2.gif?raw=true" },
         ],
         "Games": [
             { name: "Valorant - Viper", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_62cd9d7c0031a7c1eb5ad5cc96992189.png?size=96&passthrough=true" },
@@ -117,7 +123,8 @@
             { name: "Genshin - Little Matron", url: "https://upload-os-bbs.hoyolab.com/upload/2024/07/22/d070e73b57eebc782658856f83400c0f_4985728381431752077.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" },
             { name: "Genshin - Lumine", url: "https://fastcdn.hoyoverse.com/static-resource-v2/2024/04/10/e0c33a668dfe55c3d28c153fd26d2566_7549684827555419407.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" },
             { name: "Honkai - Zhu Yuan", url: "https://upload-os-bbs.hoyolab.com/upload/2024/07/23/1b34e54ec5ac3fbe67c079dd29c5f632_5221289561156079104.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" },
-            { name: "Honkai - Ellen", url: "https://upload-os-bbs.hoyolab.com/upload/2024/07/04/98126629588606c7ed379693c30b8c6c_1697937515325313185.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" }
+            { name: "Honkai - Ellen", url: "https://upload-os-bbs.hoyolab.com/upload/2024/07/04/98126629588606c7ed379693c30b8c6c_1697937515325313185.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" },
+            { name: "Minecraft - Cave", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/mc_cave.gif", scale: 1.08 },
         ],
         "Static Frames": [
             { name: "Neon 1", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/static1.png" },
@@ -135,11 +142,33 @@
             { name: "Pink Ribbon", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/ribbon.png", scale: 1.1 },
             { name: "Arrival Movie 1", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/arrival.png", scale: 1.2, onlyChannel: true, top: "4px", left: "4px", darkMode: true },
             { name: "Arrival Movie 2", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/arrival2.png", scale: 1.1, onlyChannel: true, top: "7px", darkMode: true },
-            { name: "Arrival Movie 3", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/arrival3.png", scale: 1.2, left: "5px", darkMode: true }
+            { name: "Arrival Movie 3", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/arrival3.png", scale: 1.2, left: "5px", darkMode: true },
+            { name: "Valentine 2", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/val2.png", scale: 1.1 },
+            { name: "Halloween", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/halloween.png", scale: 1.1 },
+            { name: "Halloween 2", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/halloween2.png", scale: 1.1 },
+            { name: "Valentine 3", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/val3.png", scale: 1.1 },
+            { name: "Pink Sea", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/pink_sea.gif", scale: 1.21 },
+            { name: "Saturn", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/saturn.png", scale: 1.5 },
+            { name: "Ghost Cat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/ghost_cat.gif" },
+            { name: "Fantasy Nature", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/fantasy_nature.png" },
+            { name: "Fantasy Fire", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/fantasy_fire.png" },
+            { name: "Fantasy Sea", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/fantasy_sea.png" },
+            { name: "Fantasy Dark", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/fantasy_dark.png" },
+            { name: "Dark Cat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/dark_cat.png", top: "5px", scale: 1.1 },
+            { name: "Headset", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/headset.png" },
+            { name: "Detective", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/detective.png", scale: 1.1 },
+            { name: "Lying Figures", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/lying_figures.png?raw=true", top: "-2px", scale: 1.03 },
+            { name: "Unicorn", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/unicorn.png?raw=true" },
+            { name: "Panda", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/panda.png?raw=true", top: "-3px" },
+        ],
+        "AI Static": [
+            { name: "AI Flowers", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/flowers.png", videoLeft: "-11.3px", left: "-6px", scale:1.12 },
+            { name: "Pikachu", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/pikachu.png", scale: 1.21, left: "-2px" },
         ],
         "Experimental": [
             { name: "Valorant - Clove HQ", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/clove_2.gif", top: "-10px" },
-            { name: "Magic HQ", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/magic.gif", top: "-12px", scale: 1.3 }
+            { name: "Magic HQ", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/magic.gif", top: "-12px", scale: 1.3 },
+            { name: "Cute Anime", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/cute_anime.gif", top: "-8px", scale: 1.4, left: "-8px", videoTop: "-11.2px" },
         ]
     };
 
@@ -171,12 +200,12 @@
 
     function isValidUrl() {
         const currentUrl = document.location.href.split(".com/")[1];
-        return currentUrl.startsWith("@") || currentUrl.startsWith("watch") || currentUrl.startsWith("c/");
+        return currentUrl.startsWith("@") || currentUrl.startsWith("watch") || currentUrl.startsWith("c/") || currentUrl.startsWith("channel/");
     }
 
     function isChannel() {
         const currentUrl = document.location.href.split(".com/")[1];
-        return currentUrl.startsWith("@") || currentUrl.startsWith("c/");
+        return currentUrl.startsWith("@") || currentUrl.startsWith("c/") || currentUrl.startsWith("channel/");
     }
 
     function isYouTubeDarkMode() {
@@ -564,8 +593,9 @@
 
         var objectAvatar = findAvatarByURL(url)
         var videoTop = objectAvatar.top == undefined ? "-10px" : objectAvatar.onlyChannel == true ? objectAvatar.videoTop == undefined ? "-10px" : objectAvatar.videoTop : String(objectAvatar.top);
-        var videoScale = objectAvatar.scale == undefined ? 'none' : objectAvatar.dontScaleVideos == true ? 'none' : String(objectAvatar.scale);
+        var videoScale = objectAvatar.videoScale == undefined ? objectAvatar.scale == undefined ? 'none' : objectAvatar.dontScaleVideos == true ? 'none' : String(objectAvatar.scale) : String(objectAvatar.videoScale);
         var videoFilter = objectAvatar.darkMode == true ? isYouTubeDarkMode() == true ? "invert(1)" : "none" : "none"
+        var videoLeft = objectAvatar.videoLeft == undefined ? '-10px' : String(objectAvatar.videoLeft);
 
         if (avatar) {
             let uploadInfo = document.querySelector('#upload-info');
@@ -586,7 +616,7 @@
                 let gifElement = document.createElement('img');
                 gifElement.id = 'gif-element';
                 gifElement.style.position = 'absolute';
-                gifElement.style.left = '-10px';
+                gifElement.style.left = videoLeft
                 gifElement.style.width = '60px';
                 gifElement.style.height = '60px';
                 gifElement.style.zIndex = '10';
@@ -604,6 +634,7 @@
                 gifElement.style.scale = videoScale
                 gifElement.style.top = videoTop
                 gifElement.style.filter = videoFilter
+                gifElement.style.left = videoLeft
             }
         }
 
@@ -627,7 +658,7 @@
                 let gifElement = document.createElement('img');
                 gifElement.id = 'gif-element';
                 gifElement.style.position = 'absolute';
-                gifElement.style.left = '-10px';
+                gifElement.style.left = videoLeft
                 gifElement.style.width = '60px';
                 gifElement.style.height = '60px';
                 gifElement.style.zIndex = '10';
@@ -645,6 +676,7 @@
                 gifElement.style.scale = videoScale
                 gifElement.style.top = videoTop
                 gifElement.style.filter = videoFilter
+                gifElement.style.left = videoLeft
             }
         }
 
@@ -668,7 +700,7 @@
                 let gifElement = document.createElement('img');
                 gifElement.id = 'gif-element';
                 gifElement.style.position = 'absolute';
-                gifElement.style.left = '-10px';
+                gifElement.style.left = videoLeft
                 gifElement.style.width = '60px';
                 gifElement.style.height = '60px';
                 gifElement.style.zIndex = '10';
@@ -686,6 +718,7 @@
                 gifElement.style.scale = videoScale
                 gifElement.style.top = videoTop
                 gifElement.style.filter = videoFilter
+                gifElement.style.left = videoLeft
             }
         }
     }
@@ -836,8 +869,11 @@
 
     function onUrlChange() {
         if (!isValidUrl()) return;
-        console.log("ok")
-        location.reload(true);
+        if (document.location.href.includes("index=") || document.location.href.includes("list=")) {
+            true;
+        } else {
+            location.reload(true);
+        }
         const selectedAvatar = getSelectedAvatar();
         if (selectedAvatar) {
             applyAvatar(selectedAvatar);
