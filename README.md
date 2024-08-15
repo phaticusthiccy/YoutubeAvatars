@@ -39,7 +39,7 @@
 ### :new: Keeping Up-to-date
 > [!CAUTION]
 > * The [youtube_avatar_decorations.js](youtube_avatar_decorations.js) file in the repository __may not be up to date!__
-> * To use the latest version, please visit [Greasy Fork](https://greasyfork.org/tr/scripts/503107-youtube-avatar-decorations) or [OpenUserJS](https://openuserjs.org/scripts/phaticusthiccy/YouTube_Avatar_Decorations/issues)!
+> * To use the latest version, please visit [Greasy Fork](https://greasyfork.org/tr/scripts/503107-youtube-avatar-decorations) or [OpenUserJS](https://openuserjs.org/scripts/phaticusthiccy/YouTube_Avatar_Decorations)!
 
 ---
 
