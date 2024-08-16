@@ -43,7 +43,7 @@
 
 ---
 
-### :wales: Contributing:
+### ⚒ Contributing:
 Contributions are welcome! If you have any ideas for new decorations, feel free to submit a pull request or open an issue on GitHub.
 
 ---
