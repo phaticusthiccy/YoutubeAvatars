@@ -11,9 +11,14 @@
 // @name:ja             YouTube アバターのデコレーション
 // @name:ko             YouTube 아바타 장식
 // @name:ta             YouTube அவதார் அலங்காரங்கள்
+// @name:hr             Dekoracije YouTube avatara
+// @name:it             Decorazioni per avatar di YouTube
+// @name:id             Dekorasi Avatar YouTube
+// @name:tk             YouTube Awatar bezegleri
+// @name:az             YouTube Avatar Dekorasiyaları
 // @license             MIT
 // @namespace           http://tampermonkey.net/
-// @version             1.3
+// @version             1.4
 // @description         YouTube Avatars enhances the visual experience on YouTube by allowing users to customize their avatars on both channel and video pages.
 // @description:tr      YouTube Avatarları, kullanıcıların hem kanal hem de video sayfalarında avatarlarını özelleştirmelerine olanak tanıyarak YouTube'daki görsel deneyimi geliştirir.
 // @description:de      YouTube-Avatare verbessern das visuelle Erlebnis auf YouTube, indem sie es Benutzern ermöglichen, ihre Avatare sowohl auf Kanal- als auch auf Videoseiten anzupassen.
@@ -26,6 +31,11 @@
 // @description:ja      YouTube アバターは、ユーザーがチャンネルとビデオ ページの両方でアバターをカスタマイズできるようにすることで、YouTube でのビジュアル エクスペリエンスを強化します。
 // @description:ko      YouTube 아바타는 사용자가 채널과 동영상 페이지 모두에서 아바타를 맞춤설정할 수 있도록 하여 YouTube의 시각적 경험을 향상시킵니다.
 // @description:ta      சேனல் மற்றும் வீடியோ பக்கங்களில் பயனர்கள் தங்கள் அவதாரங்களைத் தனிப்பயனாக்க அனுமதிப்பதன் மூலம் YouTube அவதாரங்கள் YouTube இல் காட்சி அனுபவத்தை மேம்படுத்துகிறது.
+// @description:hr      YouTube Avatari poboljšavaju vizualno iskustvo na YouTubeu dopuštajući korisnicima da prilagode svoje avatare na stranicama kanala i videozapisa.
+// @description:it      Gli avatar di YouTube migliorano l'esperienza visiva su YouTube consentendo agli utenti di personalizzare i propri avatar sia sul canale che sulle pagine video.
+// @description:id      Avatar YouTube meningkatkan pengalaman visual di YouTube dengan memungkinkan pengguna menyesuaikan avatar mereka di saluran dan laman video.
+// @description:tk      “YouTube Avatars”, ulanyjylara awatarlaryny iki kanalda we wideo sahypalarynda sazlamaga mümkinçilik bermek bilen, YouTube-da görüş tejribesini ýokarlandyrýar.
+// @description:az      YouTube Avatarları istifadəçilərə həm kanal, həm də video səhifələrində öz avatarlarını fərdiləşdirməyə imkan verməklə YouTube-da vizual təcrübəni artırır.
 // @author              Phaticusthiccy
 // @icon                https://i.hizliresim.com/723p62n.png
 // @match               https://www.youtube.com/*
@@ -55,6 +65,7 @@
             { name: "Sketch Hat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/hat.png" },
             { name: "Robin Hood Hat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/robin_hood.png?raw=true" },
             { name: "Devil Horns", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/devil_horn.png" },
+            { name: "Light Bulbs", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_88f42fb7360d8224a670a50c3496f315.png?size=96&passthrough=true" },
         ],
         "Animals": [
             { name: "Cat Ears", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c3cffc19e9784f7d0b005eecdf1b566e.png?size=96&passthrough=true" },
@@ -70,6 +81,7 @@
             { name: 'Anger', url: 'https://cdn.discordapp.com/avatar-decoration-presets/a_3c97a2d37f433a7913a1c7b7a735d000.png?size=96&passthrough=true' },
             { name: "Starts", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_d72066b8cecbadd9fc951913ebcc384f.png?size=96&passthrough=true" },
             { name: "Soul", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c3c09bd122898be35093d0d59850f627.png?size=96&passthrough=true" },
+            { name: "Cute Radish", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_89cd445201a0c6c64d46876503d0e90e.png?size=96&passthrough=true" },
             { name: "Sweat Drops", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_55c9d0354290afa8b7fe47ea9bd7dbcf.png?size=96&passthrough=true" },
             { name: "Cat Hat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/cat_hat.png?raw=true" },
         ],
@@ -88,7 +100,12 @@
             { name: "Neon Star", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/rotating_star.png?raw=true" },
             { name: "Daisy Ring", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/daisy_ring.png?raw=true" },
             { name: "Fire", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/circle_fire.gif?raw=true", scale: 1.7 },
-            { name: "Roses", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/roses.gif?raw=true" }
+            { name: "Roses", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/roses.gif?raw=true" },
+            { name: "Fluid Silver", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/fluid_silver.gif?raw=true", scale: 1.21 },
+            { name: "Acid", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/acid.webp?raw=true", scale: 1.45, top: "10px", left: "-2.5px", videoTop: "-5.7px", videoLeft: "-10.9px", videoScale: 1.3 },
+            { name: "Falling Star", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/falling%20star.gif", scale: 1.45, top: "-5px", left: "-5px", videoTop: "-11px", videoLeft: "-10.9px", videoScale: 1.3 },
+            { name: "Space Helmet", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_bb31faaec1be1ef5ff32dcdc5f37efbf.png?size=96&passthrough=true" },
+            { name: "Snow Globe", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_85a8f9ca60cb4328378270a7f13ed7fd.png?size=96&passthrough=true" },
         ],
         "Mystic": [
             { name: "Spirit Sparks", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_1005898c6acf56a9ac5010baf444f6fd.png?size=96&passthrough=true" },
@@ -160,6 +177,12 @@
             { name: "Lying Figures", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/lying_figures.png?raw=true", top: "-2px", scale: 1.03 },
             { name: "Unicorn", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/unicorn.png?raw=true" },
             { name: "Panda", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/panda.png?raw=true", top: "-3px" },
+            { name: "LGBT Transsexual", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/lgbt_trans.png", scale: 0.9 },
+            { name: "LGBT Lesbian", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/lgnt_les.png", scale: 1.04 },
+            { name: "LGBT Femboy", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/lgbt_femboy.png", scale: 0.9 },
+            { name: "LGBT Non-Binary", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/lgbt_nonb.png", scale: 0.9 },
+            { name: "LGBT Pride", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/lgbt_pride.png", scale: 0.9 },
+            { name: "LGBT Gay", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/lgbt_gay.png", scale: 0.9 },
         ],
         "AI Static": [
             { name: "AI Flowers", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/flowers.png", videoLeft: "-11.3px", left: "-6px", scale:1.12 },
@@ -592,7 +615,7 @@
         const avatar = document.querySelector('#avatar');
 
         var objectAvatar = findAvatarByURL(url)
-        var videoTop = objectAvatar.top == undefined ? "-10px" : objectAvatar.onlyChannel == true ? objectAvatar.videoTop == undefined ? "-10px" : objectAvatar.videoTop : String(objectAvatar.top);
+        var videoTop = objectAvatar.videoTop == undefined ? objectAvatar.top == undefined ? "-10px" : objectAvatar.onlyChannel == true ? objectAvatar.videoTop == undefined ? "-10px" : objectAvatar.videoTop : String(objectAvatar.top) : objectAvatar.videoTop;
         var videoScale = objectAvatar.videoScale == undefined ? objectAvatar.scale == undefined ? 'none' : objectAvatar.dontScaleVideos == true ? 'none' : String(objectAvatar.scale) : String(objectAvatar.videoScale);
         var videoFilter = objectAvatar.darkMode == true ? isYouTubeDarkMode() == true ? "invert(1)" : "none" : "none"
         var videoLeft = objectAvatar.videoLeft == undefined ? '-10px' : String(objectAvatar.videoLeft);
@@ -801,7 +824,7 @@
                     const leftOffset = rect.left + window.scrollX - (rect.width * 0.5);
 
                     menu.style.top = `6%`;
-                    menu.style.left = `85%`;
+                    menu.style.left = `82%`;
                 } else {
                     menu.style.opacity = '0';
                     setTimeout(() => menu.style.display = 'none', 300);
