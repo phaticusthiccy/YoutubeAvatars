@@ -8,7 +8,7 @@
 ### :octocat:	Features:
 > [!NOTE]
 > - **Decorate your YouTube avatar:** Stand out from the crowd with a unique avatar decoration.
-> - **Multiple categories:** Choose from a wide range of categories like anime, animals, nature, mystic, and more. *(More than 110 avatar frames!)*
+> - **Multiple categories:** Choose from a wide range of categories like anime, animals, nature, mystic, and more. *(More than 120 avatar frames!)*
 > - **Easy to use:** Simply select your desired decoration from the extension menu.
 > - **Regularly updated:** New decorations are added frequently.
 > - **Supports channel and video pages:** Show off your decorated avatar on both your channel and individual video pages.
