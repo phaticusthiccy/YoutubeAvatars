@@ -18,7 +18,7 @@
 // @name:az             YouTube Avatar Dekorasiyaları
 // @license             MIT
 // @namespace           http://tampermonkey.net/
-// @version             1.4
+// @version             1.5
 // @description         YouTube Avatars enhances the visual experience on YouTube by allowing users to customize their avatars on both channel and video pages.
 // @description:tr      YouTube Avatarları, kullanıcıların hem kanal hem de video sayfalarında avatarlarını özelleştirmelerine olanak tanıyarak YouTube'daki görsel deneyimi geliştirir.
 // @description:de      YouTube-Avatare verbessern das visuelle Erlebnis auf YouTube, indem sie es Benutzern ermöglichen, ihre Avatare sowohl auf Kanal- als auch auf Videoseiten anzupassen.
@@ -66,6 +66,19 @@
             { name: "Robin Hood Hat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/robin_hood.png?raw=true" },
             { name: "Devil Horns", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/devil_horn.png" },
             { name: "Light Bulbs", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_88f42fb7360d8224a670a50c3496f315.png?size=96&passthrough=true" },
+        ],
+        "Valentine": [
+            { name: "Angel", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c86b11a49bb8057ce9c974a6f7ad658a.png?size=96&passthrough=true" },
+            { name: "In Love", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_7f44d538ec830f479605f7bf8720afda.png?size=96&passthrough=true" },
+            { name: "Hearts", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_3e1fc3c7ee2e34e8176f4737427e8f4f.png?size=96&passthrough=true" },
+            { name: "Sakura", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_13913a00bd9990ab4102a3bf069f0f3f.png?size=96&passthrough=true" },
+            { name: "Sakura Warrior", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_7cf09c7e78d6eb35ae354acc1d5cc676.png?size=96&passthrough=true" },
+            { name: "Fallen Leaves", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_7fecc9d20cbbf54644c9a532f7db4664.png?size=96&passthrough=true", left: "-1.8px" },
+            { name: "Heart Lamps (Blue)", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_42cc3fe7133523096466102e7a222003.png?size=96&passthrough=true" },
+            { name: "Heart Lamps (Red)", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_63a69109db554a66764cbe61c6e556ef.png?size=96&passthrough=true" },
+            { name: "Fluffy Teddy Bear", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_555ad9b90a13534180b9274d013e3651.png?size=96&passthrough=true" },
+            { name: "Heart Ring", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_a1c0581971d4a296908829289fea2c47.png?size=96&passthrough=true", scale: 1.09 },
+
         ],
         "Animals": [
             { name: "Cat Ears", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c3cffc19e9784f7d0b005eecdf1b566e.png?size=96&passthrough=true" },
@@ -820,10 +833,10 @@
                     setTimeout(() => menu.style.opacity = '1', 0);
                     const rect = icon.getBoundingClientRect();
 
-                    const topOffset = rect.bottom + window.scrollY + (rect.height * 0.1);
+                    const topOffset = rect.bottom + window.scrollY + (rect.height * 1.25);
                     const leftOffset = rect.left + window.scrollX - (rect.width * 0.5);
 
-                    menu.style.top = `6%`;
+                    menu.style.top = topOffset + "px"
                     menu.style.left = `82%`;
                 } else {
                     menu.style.opacity = '0';
