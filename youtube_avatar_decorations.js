@@ -18,7 +18,7 @@
 // @name:az             YouTube Avatar Dekorasiyaları
 // @license             MIT
 // @namespace           http://tampermonkey.net/
-// @version             1.5
+// @version             2.0
 // @description         YouTube Avatars enhances the visual experience on YouTube by allowing users to customize their avatars on both channel and video pages.
 // @description:tr      YouTube Avatarları, kullanıcıların hem kanal hem de video sayfalarında avatarlarını özelleştirmelerine olanak tanıyarak YouTube'daki görsel deneyimi geliştirir.
 // @description:de      YouTube-Avatare verbessern das visuelle Erlebnis auf YouTube, indem sie es Benutzern ermöglichen, ihre Avatare sowohl auf Kanal- als auch auf Videoseiten anzupassen.
@@ -51,6 +51,9 @@
 
     const avatarCategories = {
         "General": [
+            { name: "Wallach Spaceport", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/wallach_spaceport.png"},
+            { name: "I'm a Clown", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/im_a_clown.png" },
+            { name: "Fireworks", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/firecrackers.png"},
             { name: "Glitch", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_e90ebc0114e7bdc30353c8b11953ea41.png?size=96&passthrough=true" },
             { name: "Cybernetics", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c6b3bc1dc49e5b284dca0b6437831004.png?size=96&passthrough=true" },
             { name: "Golden Crown", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_65db91cee351e36150a2b506b26eba71.png?size=96&passthrough=true" },
@@ -81,12 +84,16 @@
 
         ],
         "Animals": [
+            { name: "Snakes Hug", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/snakes_hug.png"},
+            { name: "Freezer Bunny", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/freezer_bunny_lovebug.png"},
+            { name: "Batman Returns", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/batarang.png"},
             { name: "Cat Ears", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c3cffc19e9784f7d0b005eecdf1b566e.png?size=96&passthrough=true" },
             { name: "Sleepy Cat", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_77b7b6a740a9451e1ef39c0252154ef8.png?size=96&passthrough=true" },
             { name: "Blob Cat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/blobcat.gif" },
             { name: "Space Whale", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/spcae_whale.gif", scale: 1.03 },
         ],
         "Anime": [
+            { name: "Fuchsia Agent", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/fuchsia_agent.png" },
             { name: "Flying Hearts", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_8ffa2ba9bff18e96b76c2e66fd0d7fa3.png?size=96&passthrough=true" },
             { name: "Ki Energy", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_f3af281c65cf0cf590e9e1f59e9c6cf6.png?size=96&passthrough=true" },
             { name: "Gushing Energy", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_c7e1751e8122f1b475cb3006966fb28c.png?size=96&passthrough=true" },
@@ -99,6 +106,9 @@
             { name: "Cat Hat", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/cat_hat.png?raw=true" },
         ],
         "Nature": [
+            { name: "Sakura Gyoiko", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/sakura_gyoiko.png"},
+            { name: "Lotus Flower", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/lotus_flower.png"},
+            { name: "Bush Camper", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/bush_camper.png"},
             { name: "Flower Clouds", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_d9ff5ff133ed9176895a4a2b5e58f1b8.png?size=96&passthrough=true" },
             { name: "Rainbow", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_bba669bfb28f492b64852e00fde4989d.png?size=96&passthrough=true" },
             { name: "Patrick the Starfish", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_0f7fa66bc185c858f92a7918ea4dd47a.png?size=96&passthrough=true" },
@@ -124,7 +134,9 @@
             { name: "Spirit Sparks", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_1005898c6acf56a9ac5010baf444f6fd.png?size=96&passthrough=true" },
             { name: "Skull Medallion", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_9d67a1cbf81fe7197c871e94f619b04b.png?size=96&passthrough=true" },
             { name: "The Wand", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_db9baf0ba7cf449d2b027c06309dbe8d.png?size=96&passthrough=true" },
-            { name: "Fairies", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_fe3c76cac2adf426832a7e495e8329d3.png?size=96&passthrough=true" },
+            { name: "Yellow Fairies", url: "https://cdn.discordapp.com/avatar-decoration-presets/a_fe3c76cac2adf426832a7e495e8329d3.png?size=96&passthrough=true" },
+            { name: "Blue Fairies", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/fairy_sprites_blue.png"},
+            { name: "Pink Fairies", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/fairy_sprites_pink.png"},
             { name: "Blue Yonder", url: "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/items/917950/9155ed2050954e8bd0e74f0f0dcfa0e96b37ec34.png" },
             { name: "Sparkles", url: "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1192640/6b555763a9ff0815cff7d45480f03ff4d1ca4ab3.png" },
             { name: "Divination", url: "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2271980/2727a0bbab23f6ecc60b86b2f4946bd31d986165.png" },
@@ -155,6 +167,14 @@
             { name: "Honkai - Zhu Yuan", url: "https://upload-os-bbs.hoyolab.com/upload/2024/07/23/1b34e54ec5ac3fbe67c079dd29c5f632_5221289561156079104.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" },
             { name: "Honkai - Ellen", url: "https://upload-os-bbs.hoyolab.com/upload/2024/07/04/98126629588606c7ed379693c30b8c6c_1697937515325313185.webp?x-oss-process=image/auto-orient,0/interlace,1/format,webp/quality,q_70" },
             { name: "Minecraft - Cave", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/mc_cave.gif", scale: 1.08 },
+            { name: "Sonic - Main", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/shadow.png"}
+        ],
+        "Movies": [
+            { name: "Arcane - Fishbones", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/fishbones.png" },
+            { name: "Arcane - Flame Chompers", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/flame_chompers.png" },
+            { name: "Arcane - Anomaly", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/the_anomaly.png" },
+            { name: "Arcane - The Mark", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/the_mark.png" },
+            { name: "Arcane - Jinx", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/the_monster_you_created.png" },
         ],
         "Static Frames": [
             { name: "Neon 1", url: "https://raw.githubusercontent.com/phaticusthiccy/phaticusthiccy/main/youtube_animated_avatars/static1.png" },
@@ -235,13 +255,13 @@
     }
 
     function isValidUrl() {
-        const currentUrl = document.location.href.split(".com/")[1];
-        return currentUrl.startsWith("@") || currentUrl.startsWith("watch") || currentUrl.startsWith("c/") || currentUrl.startsWith("channel/");
+        const path = window.location.pathname;
+        return path.startsWith("/@") || path.startsWith("/watch") || path.startsWith("/shorts") || path.startsWith("/c/") || path.startsWith("/channel/");
     }
 
     function isChannel() {
-        const currentUrl = document.location.href.split(".com/")[1];
-        return currentUrl.startsWith("@") || currentUrl.startsWith("c/") || currentUrl.startsWith("channel/");
+        const path = window.location.pathname;
+        return path.startsWith("/@") || path.startsWith("/c/") || path.startsWith("/channel/");
     }
 
     function isYouTubeDarkMode() {
@@ -269,74 +289,371 @@
         }
     }
 
+    function getAvatarConfigByUrl(url) {
+        for (const category in avatarCategories) {
+            const avatar = avatarCategories[category].find((a) => a.url === url);
+            if (avatar) return avatar;
+        }
+        return {};
+    }
+
     var searchTerm = ""
 
     function createMenu(idName = "") {
-        /*if (document.getElementById('avatar-menu2')) {
-            return;
-        }*/
-
-        var menu;
+        var wrapper;
         if (document.getElementById('avatar-menu2')) {
-            menu = document.getElementById('avatar-menu2')
-            return menu
-        } else {
-            menu = document.createElement('div');
-        };
+            wrapper = document.getElementById('avatar-menu2')
+            return wrapper
+        }
 
-        menu.id = idName == "" ? 'avatar-menu' : idName;
-        menu.style.position = 'absolute';
-        menu.style.backgroundColor = '#fff';
-        menu.style.border = '1px solid #ccc';
-        menu.style.padding = '23px';
-        menu.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
-        menu.style.borderRadius = '8px';
-        menu.style.zIndex = '9999';
-        menu.style.display = 'none';
-        menu.style.transition = 'opacity 0.3s ease';
-        menu.style.opacity = '0';
-        menu.style.maxHeight = '500px';
+        const isDarkMode = isYouTubeDarkMode();
+        const bgColor = isDarkMode ? 'rgba(15, 15, 15, 0.75)' : 'rgba(255, 255, 255, 0.75)';
+        const textColor = isDarkMode ? '#f1f1f1' : '#0f0f0f';
+        const borderColor = isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
+        const hoverColor = isDarkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)';
+        const accentColor = isDarkMode ? '#00f0ff' : '#065fd4'; // Cyberpunk neon cyan in dark mode
+        const neonGlow = isDarkMode ? '0 0 15px rgba(0, 240, 255, 0.4), inset 0 0 10px rgba(0, 240, 255, 0.2)' : '0 4px 15px rgba(6, 95, 212, 0.2)';
+
+        if (!document.getElementById('avatar-menu-styles-100x')) {
+            const style = document.createElement('style');
+            style.id = 'avatar-menu-styles-100x';
+            style.textContent = `
+,                .avatar-menu-wrapper {
+                    padding: 0;
+                    border-radius: 16px;
+                    background: none;
+                    box-shadow: none;
+                }
+                .avatar-menu-inner {
+                    border-radius: 16px;
+                    background-color: ${bgColor};
+                }
+                .avatar-menu-inner::-webkit-scrollbar { width: 4px; }
+                .avatar-menu-inner::-webkit-scrollbar-track { background: transparent; }
+                .avatar-menu-inner::-webkit-scrollbar-thumb { background-color: ${accentColor}; border-radius: 10px; }
+                
+                .avatar-menu-item {
+                    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+                    border-radius: 12px;
+                    margin-bottom: 4px;
+                    border: 1px solid transparent;
+                }
+                .avatar-menu-preview {
+                    opacity: 0;
+                    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+                    transform: translateY(-50%) scale(0.5);
+                }
+                .avatar-category-header { transition: all 0.3s ease; }
+                @keyframes spin { 100% { transform: rotate(360deg); } }
+
+,                @keyframes rgbBorder {
+                    0% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    100% { background-position: 0% 50%; }
+                }
+                .theme-100x {
+                    padding: 2px !important;
+                    border-radius: 20px !important;
+                    background: linear-gradient(45deg, #ff007a, #7a00ff, #00f0ff, #00ff7a) !important;
+                    background-size: 300% 300% !important;
+                    animation: rgbBorder 6s ease infinite !important;
+                    box-shadow: 0 15px 40px rgba(0,0,0,0.5) !important;
+                }
+                .theme-100x .avatar-menu-inner {
+                    backdrop-filter: blur(24px) saturate(200%);
+                    -webkit-backdrop-filter: blur(24px) saturate(200%);
+                    border-radius: 18px;
+                }
+                @keyframes cascadeSlideIn {
+                    0% { opacity: 0; transform: translateX(-20px); }
+                    100% { opacity: 1; transform: translateX(0); }
+                }
+                .theme-100x .avatar-menu-item {
+                    animation: cascadeSlideIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+                    opacity: 0;
+                }
+                .theme-100x .avatar-menu-item:hover {
+                    background-color: ${hoverColor} !important;
+                    transform: translateX(8px) scale(1.02);
+                    border: 1px solid ${accentColor};
+                    box-shadow: ${neonGlow};
+                }
+                .theme-100x .avatar-menu-item:active { transform: scale(0.95); }
+                .theme-100x .avatar-menu-preview { filter: drop-shadow(0 0 15px ${accentColor}); }
+                .theme-100x .avatar-menu-item:hover .avatar-menu-preview { opacity: 1; transform: translateY(-50%) scale(1.4); }
+                .theme-100x .avatar-category-header:hover { background-color: ${hoverColor} !important; padding-left: 20px !important; }
+                .theme-100x .search-input-100x:focus { box-shadow: 0 0 20px ${accentColor} !important; border-color: ${accentColor} !important; }
+
+,                .theme-10x {
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+                    border: 1px solid ${borderColor} !important;
+                }
+                .theme-10x .avatar-menu-inner {
+                    backdrop-filter: blur(16px) saturate(180%);
+                    -webkit-backdrop-filter: blur(16px) saturate(180%);
+                }
+                .theme-10x .avatar-menu-item:hover { background-color: ${hoverColor} !important; transform: translateX(6px); }
+                .theme-10x .avatar-menu-item:hover .avatar-menu-preview { opacity: 1; transform: translateY(-50%) scale(1.1); }
+                .theme-10x .avatar-category-header:hover { background-color: ${hoverColor} !important; }
+                
+,                .theme-basic {
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+                    border: 1px solid ${borderColor} !important;
+                }
+                .theme-basic .avatar-menu-inner { background-color: ${isDarkMode ? '#212121' : '#ffffff'} !important; }
+                .theme-basic .avatar-menu-item:hover { background-color: ${hoverColor} !important; }
+                .theme-basic .avatar-menu-item:hover .avatar-menu-preview { opacity: 1; transform: translateY(-50%) scale(1); }
+                .theme-basic .avatar-category-header:hover { background-color: ${hoverColor} !important; }
+            `;
+            document.head.appendChild(style);
+        } else {
+            const style = document.getElementById('avatar-menu-styles-100x');
+            style.textContent = style.textContent.replace(/background-color: rgba\([^)]+\)/g, `background-color: ${bgColor}`);
+        }
+
+        function createSVGNode(tag, attributes, styles = {}) {
+            const el = document.createElementNS("http://www.w3.org/2000/svg", tag);
+            for (const key in attributes) el.setAttribute(key, attributes[key]);
+            for (const key in styles) el.style[key] = styles[key];
+            return el;
+        }
+
+        function getSearchSVG() {
+            const svg = createSVGNode('svg', { viewBox: '0 0 24 24', width: '18', height: '18', fill: 'none', stroke: textColor, 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, { position: 'absolute', left: '16px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' });
+            svg.appendChild(createSVGNode('circle', { cx: '11', cy: '11', r: '8' }));
+            svg.appendChild(createSVGNode('line', { x1: '21', y1: '21', x2: '16.65', y2: '16.65' }));
+            return svg;
+        }
+
+        function getTrashSVG() {
+            const svg = createSVGNode('svg', { viewBox: '0 0 24 24', width: '18', height: '18', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }, { marginRight: '8px' });
+            svg.appendChild(createSVGNode('polyline', { points: '3 6 5 6 21 6' }));
+            svg.appendChild(createSVGNode('path', { d: 'M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2' }));
+            svg.appendChild(createSVGNode('line', { x1: '10', y1: '11', x2: '10', y2: '17' }));
+            svg.appendChild(createSVGNode('line', { x1: '14', y1: '11', x2: '14', y2: '17' }));
+            return svg;
+        }
+
+        function getChevronSVG() {
+            const svg = createSVGNode('svg', { viewBox: '0 0 24 24', width: '16', height: '16', fill: 'none', stroke: 'currentColor', 'stroke-width': '2', 'stroke-linecap': 'round', 'stroke-linejoin': 'round', 'class': 'category-chevron' }, { transition: 'transform 0.3s ease' });
+            svg.appendChild(createSVGNode('polyline', { points: '6 9 12 15 18 9' }));
+            return svg;
+        }
+
+        wrapper = document.createElement('div');
+        wrapper.id = idName == "" ? 'avatar-menu' : idName;
+        const activeTheme = localStorage.getItem('avatarMenuTheme') || '100x';
+        wrapper.className = 'avatar-menu-wrapper theme-' + activeTheme;
+        wrapper.style.position = 'absolute';
+        wrapper.style.zIndex = '9999';
+        wrapper.style.display = 'none';
+        wrapper.style.transition = 'opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        wrapper.style.opacity = '0';
+        wrapper.style.transform = 'translateY(-20px) scale(0.95)';
+        
+        var menu = document.createElement('div');
+        menu.className = 'avatar-menu-inner';
+        menu.style.color = textColor;
+        menu.style.padding = '24px';
+        menu.style.borderRadius = '18px';
+        menu.style.maxHeight = '550px';
         menu.style.overflowY = 'auto';
         menu.style.overflowX = 'hidden';
-        menu.style.minWidth = '250px';
-        menu.style.fontSize = '14px';
+        menu.style.minWidth = '300px';
+        menu.style.fontSize = '15px';
         menu.style.userSelect = 'none';
+        menu.style.fontFamily = '"Roboto", "Arial", sans-serif';
 
+        const searchContainer = document.createElement('div');
+        searchContainer.style.position = 'relative';
+        searchContainer.style.marginBottom = '20px';
+        searchContainer.appendChild(getSearchSVG());
 
         const searchInput = document.createElement('input');
+        searchInput.className = 'search-input-100x';
         searchInput.type = 'text';
-        searchInput.placeholder = 'Search Effect...';
+        searchInput.placeholder = 'Search awesome decorations...';
         searchInput.style.width = '100%';
-        searchInput.style.padding = '10px';
-        searchInput.style.marginBottom = '10px';
-        searchInput.style.minWidth = '250px';
-        searchInput.style.border = 'none';
+        searchInput.style.boxSizing = 'border-box';
+        searchInput.style.padding = '14px 16px 14px 44px';
+        searchInput.style.backgroundColor = isDarkMode ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.8)';
+        searchInput.style.color = textColor;
+        searchInput.style.border = `1px solid ${borderColor}`;
         searchInput.style.outline = 'none';
-        searchInput.style.boxShadow = 'none';
+        searchInput.style.borderRadius = '25px';
+        searchInput.style.transition = 'all 0.3s ease';
 
-        searchInput.addEventListener('focus', () => {
-            searchInput.style.border = 'none';
-            searchInput.style.outline = 'none';
-            searchInput.style.boxShadow = 'none';
-        });
+        searchContainer.appendChild(searchInput);
+        menu.appendChild(searchContainer);
 
-        searchInput.addEventListener('blur', () => {
-            searchInput.style.border = 'none';
-            searchInput.style.outline = 'none';
-            searchInput.style.boxShadow = 'none';
-        });
+        const selectedAvatar = getSelectedAvatar();
+        const selectedCategory = getSelectedMenu();
 
+        for (const [category, avatars] of Object.entries(avatarCategories)) {
+            const categoryDiv = document.createElement('div');
+            categoryDiv.style.marginBottom = '12px';
+
+            const categoryTitle = document.createElement('div');
+            categoryTitle.className = 'avatar-category-header';
+            
+            const titleContent = document.createElement('div');
+            titleContent.style.display = 'flex';
+            titleContent.style.justifyContent = 'space-between';
+            titleContent.style.alignItems = 'center';
+            const catSpan = document.createElement('span');
+            catSpan.textContent = category;
+            titleContent.appendChild(catSpan);
+            titleContent.appendChild(getChevronSVG());
+            
+            categoryTitle.appendChild(titleContent);
+            categoryTitle.style.fontWeight = '700';
+            categoryTitle.style.cursor = 'pointer';
+            categoryTitle.style.padding = '12px 16px';
+            categoryTitle.style.backgroundColor = isDarkMode ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.03)';
+            categoryTitle.style.borderRadius = '12px';
+            categoryTitle.style.borderLeft = `4px solid transparent`;
+
+            if (categoryContainsSelectedAvatar(category, selectedAvatar)) {
+                categoryTitle.style.borderLeft = `4px solid ${accentColor}`;
+                categoryTitle.style.color = accentColor;
+            }
+
+            const avatarList = document.createElement('div');
+            avatarList.style.display = 'none';
+            avatarList.style.padding = '8px 0 4px 16px';
+
+            categoryTitle.addEventListener('click', (event) => {
+                const isHidden = avatarList.style.display === 'none';
+                avatarList.style.display = isHidden ? 'block' : 'none';
+                categoryTitle.querySelector('.category-chevron').style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+                
+                if (isHidden) {
+                    Array.from(avatarList.children).forEach((child, idx) => {
+                        child.style.animationDelay = `${idx * 0.04}s`;
+                        child.style.animationName = 'none';
+                        setTimeout(() => child.style.animationName = 'cascadeSlideIn', 10);
+                    });
+                }
+                event.stopPropagation();
+            });
+
+            avatars.forEach(avatar => {
+                const item = document.createElement('div');
+                item.className = 'avatar-menu-item';
+                item.style.padding = '14px 16px';
+                item.style.cursor = 'pointer';
+                item.style.display = 'flex';
+                item.style.alignItems = 'center';
+                item.style.position = 'relative';
+
+                const avatarName = document.createElement('span');
+                avatarName.textContent = avatar.name;
+                avatarName.style.flexGrow = '1';
+                avatarName.style.fontWeight = '600';
+                avatarName.style.letterSpacing = '0.5px';
+
+                const previewImg = document.createElement('img');
+                previewImg.className = 'avatar-menu-preview';
+                previewImg.style.width = '44px';
+                previewImg.style.height = '44px';
+                previewImg.style.position = 'absolute';
+                previewImg.style.right = '12px';
+                previewImg.style.top = '50%';
+                previewImg.style.pointerEvents = 'none';
+                
+                if (avatar.url === selectedAvatar) {
+                    item.style.backgroundColor = hoverColor;
+                    avatarName.style.color = accentColor;
+                    item.style.border = `1px solid ${accentColor}`;
+                    item.style.boxShadow = neonGlow;
+                }
+
+                item.appendChild(avatarName);
+                item.appendChild(previewImg);
+
+                item.addEventListener('mouseenter', () => {
+                    if (!previewImg.src) previewImg.src = avatar.url;
+                });
+
+                item.addEventListener('click', () => {
+                    var selectedAvatar2 = avatar.url;
+                    var selectedCategory2 = findCategoryByUrl(selectedAvatar2, avatarCategories);
+                    var effectName = document.querySelector("#selectedEffectName");
+
+                    if (selectedAvatar2 && selectedCategory2) {
+                        let findAvatarName = avatarCategories[selectedCategory2].find((a) => a.url == selectedAvatar2);
+                        
+                        if (!effectName) {
+                            effectName = document.createElement('div');
+                            effectName.style.fontWeight = '700';
+                            effectName.style.marginBottom = '20px';
+                            effectName.style.textAlign = "center";
+                            effectName.style.color = accentColor;
+                            effectName.style.padding = '14px';
+                            effectName.style.backgroundColor = isDarkMode ? 'rgba(0, 240, 255, 0.1)' : 'rgba(6, 95, 212, 0.1)';
+                            effectName.style.border = `1px solid ${accentColor}`;
+                            effectName.style.boxShadow = neonGlow;
+                            effectName.style.borderRadius = '14px';
+                            effectName.id = "selectedEffectName";
+                            menu.insertBefore(effectName, menu.firstChild);
+                        }
+
+                        effectName.textContent = `✨ ${selectedCategory2} • ${findAvatarName.name} `;
+                        
+                        let spinnerSpan = document.createElement('span');
+                        spinnerSpan.className = 'avatar-loading-spinner';
+                        spinnerSpan.style.display = 'inline-block';
+                        spinnerSpan.style.animation = 'spin 1s linear infinite';
+                        spinnerSpan.style.marginLeft = '8px';
+                        spinnerSpan.textContent = '⏳';
+                        
+                        effectName.appendChild(spinnerSpan);
+                    }
+
+                    saveSelectedAvatar(avatar.url, category);
+                    updateMenu(wrapper);
+
+                    const img = new Image();
+                    img.onload = () => {
+                        if (getSelectedAvatar() === avatar.url) {
+                            if (effectName) {
+                                const spinner = effectName.querySelector('.avatar-loading-spinner');
+                                if (spinner) spinner.remove();
+                            }
+                            applyAvatar(avatar.url);
+                        }
+                    };
+                    img.onerror = () => {
+                        if (getSelectedAvatar() === avatar.url && effectName) {
+                            const spinner = effectName.querySelector('.avatar-loading-spinner');
+                            if (spinner) { spinner.style.animation = 'none'; spinner.textContent = '❌'; }
+                        }
+                    };
+                    img.src = avatar.url;
+                });
+                
+                avatarList.appendChild(item);
+            });
+
+            categoryDiv.appendChild(categoryTitle);
+            categoryDiv.appendChild(avatarList);
+            menu.appendChild(categoryDiv);
+        }
 
         searchInput.addEventListener('input', (event) => {
             const searchTerm = event.target.value.toLowerCase();
-            menu.querySelectorAll('div > div > div').forEach((item) => {
+            let idx = 0;
+            menu.querySelectorAll('.avatar-menu-item').forEach((item) => {
                 if (searchTerm === '') {
                     item.style.display = '';
                     item.parentElement.style.display = 'none';
                     item.parentElement.parentElement.style.display = 'block';
-                    //item.parentElement.parentElement.children[1].style.display = 'none';
                 } else if (item.textContent.toLowerCase().includes(searchTerm)) {
-                    item.style.display = "block"
+                    item.style.display = "flex";
+                    item.style.animationDelay = `${idx * 0.04}s`;
+                    item.style.animationName = 'none';
+                    setTimeout(() => item.style.animationName = 'cascadeSlideIn', 10);
+                    idx++;
                     item.parentElement.style.display = 'block';
                     item.parentElement.parentElement.style.display = 'block';
                     item.parentElement.parentElement.children[1].style.display = 'block';
@@ -346,202 +663,175 @@
             });
         });
 
-        menu.insertBefore(searchInput, menu.firstChild);
-
-        const selectedAvatar = getSelectedAvatar();
-        const selectedCategory = getSelectedMenu();
-
-        for (const [category, avatars] of Object.entries(avatarCategories)) {
-            const categoryDiv = document.createElement('div');
-            categoryDiv.style.marginBottom = '15px';
-
-            const categoryTitle = document.createElement('div');
-            categoryTitle.textContent = category;
-            categoryTitle.style.fontWeight = 'bold';
-            categoryTitle.style.marginBottom = '8px';
-            categoryTitle.style.cursor = 'pointer';
-            categoryTitle.style.padding = '8px';
-            categoryTitle.style.backgroundColor = '#f0f0f0';
-            categoryTitle.style.borderRadius = '4px';
-
-
-            if (categoryContainsSelectedAvatar(category, selectedAvatar) == true) {
-                categoryTitle.style.color = '#369626';
-            }
-
-            const avatarList = document.createElement('div');
-            avatarList.style.display = 'none';
-            avatarList.style.paddingLeft = '15px';
-
-            categoryTitle.addEventListener('click', (event) => {
-                avatarList.style.display = avatarList.style.display === 'none' ? 'block' : 'none';
-                event.stopPropagation();
-            });
-
-            avatars.forEach(avatar => {
-                const item = document.createElement('div');
-                item.style.padding = '10px';
-                item.style.cursor = 'pointer';
-                item.style.borderBottom = '1px solid #eee';
-                item.style.transition = 'background-color 0.2s';
-                item.style.display = 'flex';
-                item.style.alignItems = 'center';
-                item.style.position = 'relative';
-
-                const avatarName = document.createElement('span');
-                avatarName.textContent = avatar.name;
-                avatarName.style.flexGrow = '1';
-
-
-                const previewImg = document.createElement('img');
-                previewImg.style.width = '30px';
-                previewImg.style.height = '30px';
-                previewImg.style.marginLeft = '20px';
-                previewImg.style.marginRight = '25px';
-                previewImg.style.display = 'none';
-                previewImg.style.position = 'absolute';
-                previewImg.style.right = '0';
-                previewImg.style.top = '50%';
-                previewImg.style.transform = 'translateY(-50%)';
-
-                item.appendChild(avatarName);
-                item.appendChild(previewImg);
-
-                item.addEventListener('mouseenter', () => {
-                    item.style.backgroundColor = '#f5f5f5';
-                    item.style.transform = 'scale(1.2)';
-                    item.style.transition = 'transform 0.2s ease';
-                    item.style.zIndex = '100';
-                    previewImg.style.display = 'block';
-
-                    if (!previewImg.src) {
-                        previewImg.src = avatar.url;
-                    }
-                    previewImg.style.display = 'block';
-
-                });
-                item.addEventListener('mouseleave', () => {
-                    item.style.backgroundColor = '#fff';
-                    item.style.transform = 'scale(1)';
-                    item.style.transition = 'transform 0.2s ease';
-                    item.style.zIndex = '0';
-                    previewImg.style.display = 'none';
-                });
-
-                item.addEventListener('click', () => {
-
-                    var selectedAvatar2 = avatar.url
-                    var selectedCategory2 = findCategoryByUrl(selectedAvatar2, avatarCategories)
-
-                    if (selectedAvatar2 && selectedCategory2) {
-                        var effectName = document.querySelector("#selectedEffectName")
-                        if (effectName) {
-                            let findAvatarName = avatarCategories[selectedCategory2].find((avatar3) => avatar3.url == selectedAvatar2)
-                            effectName.textContent = `${selectedCategory2} • ${findAvatarName.name}`
-                        } else {
-                            let selectedAvatarInfo = document.createElement('div');
-                            selectedAvatarInfo.style.fontWeight = 'bold';
-                            selectedAvatarInfo.style.marginBottom = '10px';
-                            selectedAvatarInfo.style.textAlign = "center"
-                            selectedAvatarInfo.style.color = "#369626"
-                            selectedAvatarInfo.id = "selectedEffectName"
-                            let findAvatarName = avatarCategories[selectedCategory2].find((avatar3) => avatar3.url == selectedAvatar2)
-                            selectedAvatarInfo.textContent = `${selectedCategory2} • ${findAvatarName.name}`
-                            menu.insertBefore(selectedAvatarInfo, menu.firstChild);
-                        }
-                    }
-
-                    applyAvatar(avatar.url);
-                    saveSelectedAvatar(avatar.url, category);
-                    updateMenu(menu);
-                    //menu.style.opacity = '0';
-                    //setTimeout(() => menu.style.display = 'none', 300);
-                });
-                item.addEventListener('mouseover', () => {
-                    item.style.backgroundColor = '#f5f5f5';
-                });
-                item.addEventListener('mouseout', () => {
-                    item.style.backgroundColor = '#fff';
-                });
-                avatarList.appendChild(item);
-            });
-
-            categoryDiv.appendChild(categoryTitle);
-            categoryDiv.appendChild(avatarList);
-            menu.appendChild(categoryDiv);
-        }
-
         const removeItem = document.createElement('div');
-        removeItem.style.padding = '10px';
+        removeItem.style.padding = '16px';
         removeItem.style.cursor = 'pointer';
-        removeItem.style.borderTop = '1px solid #eee';
+        removeItem.style.marginTop = '16px';
         removeItem.style.color = '#ff4d4d';
-        removeItem.style.fontWeight = 'bold';
-        removeItem.textContent = 'Remove';
-        removeItem.style.textAlign = "center"
+        removeItem.style.fontWeight = '700';
+        removeItem.style.display = 'flex';
+        removeItem.style.justifyContent = 'center';
+        removeItem.style.alignItems = 'center';
+        removeItem.appendChild(getTrashSVG());
+        const rmText = document.createElement('span');
+        rmText.textContent = 'REMOVE DECORATION';
+        removeItem.appendChild(rmText);
+        removeItem.style.borderRadius = '14px';
+        removeItem.style.transition = 'all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)';
+        removeItem.style.border = '1px solid transparent';
+        
         removeItem.addEventListener('click', () => {
-            var effectName = document.querySelector("#selectedEffectName")
-            if (effectName) effectName.remove()
+            var effectName = document.querySelector("#selectedEffectName");
+            if (effectName) effectName.remove();
             removeAvatar();
             saveSelectedAvatar('', '');
-            updateMenu(menu);
-            menu.style.opacity = '0';
-            setTimeout(() => menu.style.display = 'none', 300);
+            updateMenu(wrapper);
+            wrapper.style.opacity = '0';
+            wrapper.style.transform = 'translateY(-20px) scale(0.95)';
+            setTimeout(() => wrapper.style.display = 'none', 400);
         });
+        
         removeItem.addEventListener('mouseover', () => {
-            removeItem.style.backgroundColor = '#f5f5f5';
+            removeItem.style.backgroundColor = 'rgba(255, 77, 77, 0.1)';
+            removeItem.style.border = '1px solid #ff4d4d';
+            removeItem.style.boxShadow = '0 0 15px rgba(255, 77, 77, 0.3)';
+            removeItem.style.transform = 'scale(1.02)';
         });
+        
         removeItem.addEventListener('mouseout', () => {
-            removeItem.style.backgroundColor = '#fff';
+            removeItem.style.backgroundColor = 'transparent';
+            removeItem.style.border = '1px solid transparent';
+            removeItem.style.boxShadow = 'none';
+            removeItem.style.transform = 'scale(1)';
         });
+        
         menu.appendChild(removeItem);
 
-        removeItem.addEventListener('mouseenter', () => {
-            removeItem.style.backgroundColor = '#f5f5f5';
-            removeItem.style.transform = 'scale(1.2)';
-            removeItem.style.transition = 'transform 0.2s ease';
-            removeItem.style.zIndex = '100';
-        });
-        removeItem.addEventListener('mouseleave', () => {
-            removeItem.style.backgroundColor = '#fff';
-            removeItem.style.transform = 'scale(1)';
-            removeItem.style.transition = 'transform 0.2s ease';
-            removeItem.style.zIndex = '0';
-        });
+        const settingsDivider = document.createElement('hr');
+        settingsDivider.style.border = 'none';
+        settingsDivider.style.borderTop = `1px solid ${borderColor}`;
+        settingsDivider.style.margin = '16px 0';
+        menu.appendChild(settingsDivider);
 
-        document.body.appendChild(menu);
+        const settingsTitle = document.createElement('div');
+        settingsTitle.textContent = '⚙️ Theme Settings';
+        settingsTitle.style.fontWeight = '700';
+        settingsTitle.style.marginBottom = '12px';
+        settingsTitle.style.color = textColor;
+        menu.appendChild(settingsTitle);
+
+        const themeContainer = document.createElement('div');
+        themeContainer.style.display = 'flex';
+        themeContainer.style.gap = '8px';
+        
+        ['basic', '10x', '100x'].forEach(t => {
+            const btn = document.createElement('div');
+            btn.textContent = t == "basic" ? "Basic" : t == "10x" ? "Modern" : "Vivid";
+            btn.style.flex = '1';
+            btn.style.textAlign = 'center';
+            btn.style.padding = '8px';
+            btn.style.borderRadius = '8px';
+            btn.style.cursor = 'pointer';
+            btn.style.border = `1px solid ${borderColor}`;
+            btn.style.fontSize = '12px';
+            btn.style.fontWeight = 'bold';
+            
+            const currentTheme = localStorage.getItem('avatarMenuTheme') || '100x';
+            if(t === currentTheme) {
+                btn.style.backgroundColor = accentColor;
+                btn.style.color = '#fff';
+                btn.style.borderColor = accentColor;
+            } else {
+                btn.style.backgroundColor = 'transparent';
+                btn.style.color = textColor;
+            }
+
+            btn.addEventListener('click', () => {
+                localStorage.setItem('avatarMenuTheme', t);
+                wrapper.className = 'avatar-menu-wrapper theme-' + t;
+                Array.from(themeContainer.children).forEach(c => {
+                    if (c === btn) {
+                        c.style.backgroundColor = accentColor; c.style.color = '#fff'; c.style.borderColor = accentColor;
+                    } else {
+                        c.style.backgroundColor = 'transparent'; c.style.color = textColor; c.style.borderColor = borderColor;
+                    }
+                });
+                
+                if(t !== '100x') {
+                    Array.from(menu.querySelectorAll('.avatar-menu-item')).forEach(i => i.style.animationName = 'none');
+                }
+            });
+            themeContainer.appendChild(btn);
+        });
+        menu.appendChild(themeContainer);
+
+        wrapper.appendChild(menu);
+        document.body.appendChild(wrapper);
 
         document.addEventListener('click', (event) => {
-            if (menu.style.display === 'block' && !menu.contains(event.target) && event.target.id !== 'avatar-icon') {
-                menu.style.opacity = '0';
-                setTimeout(() => menu.style.display = 'none', 300);
+            if (wrapper.style.display === 'block' && !wrapper.contains(event.target) && event.target.id !== 'avatar-icon') {
+                wrapper.style.opacity = '0';
+                wrapper.style.transform = 'translateY(-20px) scale(0.95)';
+                setTimeout(() => wrapper.style.display = 'none', 400);
             }
         });
 
         try {
             if (selectedAvatar && selectedCategory) {
-                const selectedAvatarInfo = document.createElement('div');
-                selectedAvatarInfo.style.fontWeight = 'bold';
-                selectedAvatarInfo.style.marginBottom = '10px';
-                selectedAvatarInfo.style.textAlign = "center"
-                selectedAvatarInfo.style.color = "#369626"
-                selectedAvatarInfo.id = "selectedEffectName"
-                var findAvatarName = avatarCategories[selectedCategory].find((avatar) => avatar.url == selectedAvatar)
-                selectedAvatarInfo.textContent = `${selectedCategory} • ${findAvatarName.name}`;
-                menu.insertBefore(selectedAvatarInfo, menu.firstChild);
+                let effectName = document.createElement('div');
+                effectName.style.fontWeight = '700';
+                effectName.style.marginBottom = '20px';
+                effectName.style.textAlign = "center";
+                effectName.style.color = accentColor;
+                effectName.style.padding = '14px';
+                effectName.style.backgroundColor = isDarkMode ? 'rgba(0, 240, 255, 0.1)' : 'rgba(6, 95, 212, 0.1)';
+                effectName.style.border = `1px solid ${accentColor}`;
+                effectName.style.boxShadow = neonGlow;
+                effectName.style.borderRadius = '14px';
+                effectName.id = "selectedEffectName";
+                var findAvatarName = avatarCategories[selectedCategory].find((avatar) => avatar.url == selectedAvatar);
+                if(findAvatarName) {
+                    effectName.textContent = `✨ ${selectedCategory} • ${findAvatarName.name}`;
+                    menu.insertBefore(effectName, menu.firstChild);
+                }
             }
         } catch {}
 
-        return menu;
+        return wrapper;
     }
 
-    function updateMenu(menu) {
+    function updateMenu(wrapper) {
         const selectedAvatar = getSelectedAvatar();
-        menu.querySelectorAll('div > div').forEach((item) => {
-            if (item.style.padding === '8px') {
-                item.style.color = '';
-            }
-        });
+        const selectedCategory = getSelectedMenu();
+        const accentColor = isYouTubeDarkMode() ? '#00f0ff' : '#065fd4';
+
+        if(wrapper) {
+            wrapper.querySelectorAll('.avatar-category-header').forEach((header) => {
+                const categoryText = header.querySelector('span') ? header.querySelector('span').textContent : '';
+                if (categoryText === selectedCategory) {
+                    header.style.borderLeft = `4px solid ${accentColor}`;
+                    header.style.color = accentColor;
+                } else {
+                    header.style.borderLeft = `4px solid transparent`;
+                    header.style.color = '';
+                }
+            });
+            
+            wrapper.querySelectorAll('.avatar-menu-item').forEach((item) => {
+                const avatarName = item.querySelector('span');
+                const img = item.querySelector('img');
+                if (img && img.src && img.src === selectedAvatar) {
+                    item.style.backgroundColor = isYouTubeDarkMode() ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)';
+                    if(avatarName) avatarName.style.color = accentColor;
+                    item.style.border = `1px solid ${accentColor}`;
+                } else {
+                    item.style.backgroundColor = 'transparent';
+                    if(avatarName) avatarName.style.color = '';
+                    item.style.border = '1px solid transparent';
+                    item.style.boxShadow = 'none';
+                }
+            });
+        }
     }
 
     function findCategoryByUrl(url, avatarCategories) {
@@ -566,26 +856,17 @@
     }
 
     function applyChannelAvatar(url) {
-        const avatarShape = document.querySelector('yt-avatar-shape');
-        const findAvatarByURL = (url) => {
-            for (const category in avatarCategories) {
-                const avatar = avatarCategories[category].find((avatar) => avatar.url === url);
-                if (avatar) return avatar;
-            }
-            return {};
-        };
-        if (avatarShape) {
+        const channelFind = getAvatarConfigByUrl(url);
+        const channelTop = channelFind.top == undefined ? "0" : String(channelFind.top);
+        const channelScale = channelFind.scale == undefined ? 'none' : String(channelFind.scale);
+        const channelFilter = channelFind.darkMode == true ? isYouTubeDarkMode() == true ? "invert(1)" : "none" : "none";
+        const channelLeft = channelFind.left == undefined ? '0' : String(channelFind.left);
 
-            var channelFind = findAvatarByURL(url)
-            var channelTop = channelFind.top == undefined ? "0" : String(channelFind.top);
-            var channelScale = channelFind.scale == undefined ? 'none' : String(channelFind.scale);
-            var channelFilter = channelFind.darkMode == true ? isYouTubeDarkMode() == true ? "invert(1)" : "none" : "none"
-            var channelLeft = channelFind.left == undefined ? '0' : String(channelFind.left);
-
-            let gifWrapper = avatarShape.querySelector('#gif-wrapper');
+        document.querySelectorAll('yt-avatar-shape').forEach(avatarShape => {
+            let gifWrapper = avatarShape.querySelector('.ytd-avatar-decoration-wrapper');
             if (!gifWrapper) {
                 gifWrapper = document.createElement('div');
-                gifWrapper.id = 'gif-wrapper';
+                gifWrapper.className = 'ytd-avatar-decoration-wrapper';
                 gifWrapper.style.position = 'absolute';
                 gifWrapper.style.width = '160px';
                 gifWrapper.style.height = '160px';
@@ -593,191 +874,122 @@
                 gifWrapper.style.scale = '1.21';
 
                 const gifElement = document.createElement('img');
-                gifElement.id = 'gif-element';
+                gifElement.className = 'ytd-avatar-decoration-element';
                 gifElement.style.position = 'absolute';
-                gifElement.style.top = channelTop
-                gifElement.style.left = channelLeft
+                gifElement.style.top = channelTop;
+                gifElement.style.left = channelLeft;
                 gifElement.style.width = '100%';
                 gifElement.style.height = '100%';
                 gifElement.style.zIndex = '10';
-                gifElement.style.scale = channelScale
-                gifElement.style.filter = channelFilter
+                gifElement.style.scale = channelScale;
+                gifElement.style.filter = channelFilter;
 
                 gifWrapper.appendChild(gifElement);
                 avatarShape.insertBefore(gifWrapper, avatarShape.firstChild);
             }
-            const gifElement = gifWrapper.querySelector('#gif-element');
-            if (gifElement.src !== url) {
-                gifElement.src = url;
-                gifElement.style.scale = channelScale
-                gifElement.style.top = channelTop
-                gifElement.style.filter = channelFilter
-                gifElement.style.left = channelLeft
-            }
-        }
+            const gifElement = gifWrapper.querySelector('.ytd-avatar-decoration-element');
+            gifElement.src = url;
+            gifElement.style.scale = channelScale;
+            gifElement.style.top = channelTop;
+            gifElement.style.filter = channelFilter;
+            gifElement.style.left = channelLeft;
+        });
     }
 
     function applyVideoAvatar(url) {
-        const findAvatarByURL = (url) => {
-            for (const category in avatarCategories) {
-                const avatar = avatarCategories[category].find((avatar) => avatar.url === url);
-                if (avatar) return avatar;
-            }
-            return {};
-        };
-        const avatar = document.querySelector('#avatar');
+        const objectAvatar = getAvatarConfigByUrl(url);
 
-        var objectAvatar = findAvatarByURL(url)
-        var videoTop = objectAvatar.videoTop == undefined ? objectAvatar.top == undefined ? "-10px" : objectAvatar.onlyChannel == true ? objectAvatar.videoTop == undefined ? "-10px" : objectAvatar.videoTop : String(objectAvatar.top) : objectAvatar.videoTop;
-        var videoScale = objectAvatar.videoScale == undefined ? objectAvatar.scale == undefined ? 'none' : objectAvatar.dontScaleVideos == true ? 'none' : String(objectAvatar.scale) : String(objectAvatar.videoScale);
-        var videoFilter = objectAvatar.darkMode == true ? isYouTubeDarkMode() == true ? "invert(1)" : "none" : "none"
-        var videoLeft = objectAvatar.videoLeft == undefined ? '-10px' : String(objectAvatar.videoLeft);
+        const targetSelectors = [
+            '#avatar',
+            'yt-decorated-avatar-view-model.ytDecoratedAvatarViewModelHost',
+            'a.yt-simple-endpoint.style-scope.ytd-video-owner-renderer #avatar',
+            'ytd-watch-flexy a.yt-simple-endpoint.style-scope.ytd-video-owner-renderer #avatar'
+        ];
 
-        if (avatar) {
-            let uploadInfo = document.querySelector('#upload-info');
-            if (uploadInfo) {
-                uploadInfo.style.position = 'relative';
-                uploadInfo.style.left = '10px';
-            }
+        const videoFilter = objectAvatar.darkMode == true ? isYouTubeDarkMode() == true ? "invert(1)" : "none" : "none";
 
-            let gifWrapper = document.querySelector('#gif-wrapper');
-            if (!gifWrapper) {
-                gifWrapper = document.createElement('div');
-                gifWrapper.id = 'gif-wrapper';
-                gifWrapper.style.position = 'relative';
-                gifWrapper.style.width = '40px';
-                gifWrapper.style.height = '40px';
-                gifWrapper.style.zIndex = '10';
+        targetSelectors.forEach(selector => {
+            document.querySelectorAll(selector).forEach(avatar => {
+                let uploadInfo = document.querySelector('#upload-info');
+                if (uploadInfo) {
+                    uploadInfo.style.position = 'relative';
+                    uploadInfo.style.left = '10px';
+                }
 
-                let gifElement = document.createElement('img');
-                gifElement.id = 'gif-element';
-                gifElement.style.position = 'absolute';
-                gifElement.style.left = videoLeft
-                gifElement.style.width = '60px';
-                gifElement.style.height = '60px';
-                gifElement.style.zIndex = '10';
-                gifElement.style.scale = videoScale
-                gifElement.style.top = videoTop
-                gifElement.style.filter = videoFilter
+                let baseTop = objectAvatar.videoTop !== undefined ? String(objectAvatar.videoTop) : 
+                              objectAvatar.top !== undefined ? String(objectAvatar.top) : "-10px";
+                              
+                let baseLeft = objectAvatar.videoLeft !== undefined ? String(objectAvatar.videoLeft) : "-10px";
+                
+                let baseScale = objectAvatar.videoScale !== undefined ? String(objectAvatar.videoScale) : 
+                                (objectAvatar.scale !== undefined && objectAvatar.dontScaleVideos !== true) ? String(objectAvatar.scale) : "none";
 
-                gifWrapper.appendChild(gifElement);
-                avatar.parentElement.insertBefore(gifWrapper, avatar);
-                gifWrapper.appendChild(avatar);
-            }
-            let gifElement = document.querySelector('#gif-element');
-            if (gifElement.src !== url) {
+                let avatarWidth = avatar.offsetWidth || 40;
+                let avatarHeight = avatar.offsetHeight || 40;
+                let ratio = avatarWidth / 40;
+
+                let calculatedTop = baseTop;
+                if (baseTop.endsWith('px')) {
+                    calculatedTop = (parseFloat(baseTop) * ratio) + "px";
+                }
+                
+                let calculatedLeft = baseLeft;
+                if (baseLeft.endsWith('px')) {
+                    calculatedLeft = (parseFloat(baseLeft) * ratio) + "px";
+                }
+
+                let wrapperWidth = avatarWidth + 'px';
+                let wrapperHeight = avatarHeight + 'px';
+                let elementWidth = (avatarWidth * 1.5) + 'px';
+                let elementHeight = (avatarHeight * 1.5) + 'px';
+
+                let gifWrapper = avatar.closest('.ytd-avatar-decoration-wrapper');
+                if (!gifWrapper) {
+                    gifWrapper = document.createElement('div');
+                    gifWrapper.className = 'ytd-avatar-decoration-wrapper';
+                    gifWrapper.style.position = 'relative';
+                    gifWrapper.style.zIndex = '10';
+
+                    let gifElement = document.createElement('img');
+                    gifElement.className = 'ytd-avatar-decoration-element';
+                    gifElement.style.position = 'absolute';
+                    gifElement.style.zIndex = '10';
+
+                    gifWrapper.appendChild(gifElement);
+                    if (avatar.parentElement) {
+                        avatar.parentElement.insertBefore(gifWrapper, avatar);
+                    }
+                    gifWrapper.appendChild(avatar);
+                }
+                
+                gifWrapper.style.width = wrapperWidth;
+                gifWrapper.style.height = wrapperHeight;
+
+                let gifElement = gifWrapper.querySelector('.ytd-avatar-decoration-element');
                 gifElement.src = url;
-                gifElement.style.scale = videoScale
-                gifElement.style.top = videoTop
-                gifElement.style.filter = videoFilter
-                gifElement.style.left = videoLeft
-            }
-        }
-
-        const avatar2 = document.querySelector('a.yt-simple-endpoint.style-scope.ytd-video-owner-renderer #avatar');
-        if (avatar2) {
-            let uploadInfo = document.querySelector('#upload-info');
-            if (uploadInfo) {
-                uploadInfo.style.position = 'relative';
-                uploadInfo.style.left = '10px';
-            }
-
-            let gifWrapper = document.querySelector('#gif-wrapper');
-            if (!gifWrapper) {
-                gifWrapper = document.createElement('div');
-                gifWrapper.id = 'gif-wrapper';
-                gifWrapper.style.position = 'relative';
-                gifWrapper.style.width = '40px';
-                gifWrapper.style.height = '40px';
-                gifWrapper.style.zIndex = '10';
-
-                let gifElement = document.createElement('img');
-                gifElement.id = 'gif-element';
-                gifElement.style.position = 'absolute';
-                gifElement.style.left = videoLeft
-                gifElement.style.width = '60px';
-                gifElement.style.height = '60px';
-                gifElement.style.zIndex = '10';
-                gifElement.style.scale = videoScale
-                gifElement.style.top = videoTop
-                gifElement.style.filter = videoFilter
-
-                gifWrapper.appendChild(gifElement);
-                avatar2.parentElement.insertBefore(gifWrapper, avatar2);
-                gifWrapper.appendChild(avatar2);
-            }
-            let gifElement = document.querySelector('#gif-element');
-            if (gifElement.src !== url) {
-                gifElement.src = url;
-                gifElement.style.scale = videoScale
-                gifElement.style.top = videoTop
-                gifElement.style.filter = videoFilter
-                gifElement.style.left = videoLeft
-            }
-        }
-
-        const avatar3 = document.querySelector("ytd-watch-flexy a.yt-simple-endpoint.style-scope.ytd-video-owner-renderer #avatar")
-        if (avatar3) {
-            let uploadInfo = document.querySelector('#upload-info');
-            if (uploadInfo) {
-                uploadInfo.style.position = 'relative';
-                uploadInfo.style.left = '10px';
-            }
-
-            let gifWrapper = document.querySelector('#gif-wrapper');
-            if (!gifWrapper) {
-                gifWrapper = document.createElement('div');
-                gifWrapper.id = 'gif-wrapper';
-                gifWrapper.style.position = 'relative';
-                gifWrapper.style.width = '40px';
-                gifWrapper.style.height = '40px';
-                gifWrapper.style.zIndex = '10';
-
-                let gifElement = document.createElement('img');
-                gifElement.id = 'gif-element';
-                gifElement.style.position = 'absolute';
-                gifElement.style.left = videoLeft
-                gifElement.style.width = '60px';
-                gifElement.style.height = '60px';
-                gifElement.style.zIndex = '10';
-                gifElement.style.scale = videoScale
-                gifElement.style.top = videoTop
-                gifElement.style.filter = videoFilter
-
-                gifWrapper.appendChild(gifElement);
-                avatar3.parentElement.insertBefore(gifWrapper, avatar3);
-                gifWrapper.appendChild(avatar3);
-            }
-            let gifElement = document.querySelector('#gif-element');
-            if (gifElement.src !== url) {
-                gifElement.src = url;
-                gifElement.style.scale = videoScale
-                gifElement.style.top = videoTop
-                gifElement.style.filter = videoFilter
-                gifElement.style.left = videoLeft
-            }
-        }
+                gifElement.style.width = elementWidth;
+                gifElement.style.height = elementHeight;
+                gifElement.style.scale = baseScale;
+                gifElement.style.top = calculatedTop;
+                gifElement.style.filter = videoFilter;
+                gifElement.style.left = calculatedLeft;
+            });
+        });
     }
 
     function removeAvatar() {
-        if (isChannel()) {
-            const gifWrapper = document.querySelector('yt-avatar-shape #gif-wrapper');
-            if (gifWrapper) {
-                gifWrapper.remove();
+        document.querySelectorAll('.ytd-avatar-decoration-wrapper').forEach(gifWrapper => {
+            const uploadInfo = document.querySelector('#upload-info');
+            if (uploadInfo) {
+                uploadInfo.style.position = 'relative';
+                uploadInfo.style.left = '0px';
             }
-        } else {
-            const gifWrapper = document.querySelector('#gif-wrapper');
-            if (gifWrapper) {
-                const uploadInfo = document.querySelector('#upload-info');
-                if (uploadInfo) {
-                    uploadInfo.style.position = 'relative';
-                    uploadInfo.style.left = '0px';
-                }
-                const avatar = gifWrapper.querySelector('#avatar');
+            const avatar = gifWrapper.querySelector('#avatar');
+            if (avatar && gifWrapper.parentElement) {
                 gifWrapper.parentElement.insertBefore(avatar, gifWrapper);
-                gifWrapper.remove();
             }
-        }
+            gifWrapper.remove();
+        });
     }
 
     function addIcon() {
@@ -859,7 +1071,6 @@
     function keepAlive() {
         setInterval(() => {
             addIcon();
-            //createMenu();
         }, 2000)
     }
 
@@ -893,26 +1104,25 @@
     }
 
     function observeUrlChange() {
-        let lastUrl = location.href;
-        new MutationObserver(() => {
-            const url = location.href;
-            if (url !== lastUrl) {
-                lastUrl = url;
-                onUrlChange();
-            }
-        }).observe(document, { subtree: true, childList: true });
+        document.addEventListener('yt-navigate-finish', onUrlChange);
+        document.addEventListener('yt-page-data-updated', onUrlChange);
     }
 
     function onUrlChange() {
         if (!isValidUrl()) return;
-        if (document.location.href.includes("index=") || document.location.href.includes("list=")) {
-            true;
-        } else {
-            location.reload(true);
-        }
+        
         const selectedAvatar = getSelectedAvatar();
         if (selectedAvatar) {
             applyAvatar(selectedAvatar);
+            
+            let retries = 0;
+            const applyInterval = setInterval(() => {
+                applyAvatar(selectedAvatar);
+                retries++;
+                if (retries >= 5 || !isValidUrl()) {
+                    clearInterval(applyInterval);
+                }
+            }, 800);
         }
     }
 
@@ -926,25 +1136,6 @@
         keepAlive();
     }
 
-    function checkAndApplyChannelAvatar() {
-        if (!isValidUrl()) return;
-        const selectedAvatar = getSelectedAvatar();
-        if (selectedAvatar) {
-            if (isChannel()) {
-                const avatarShape = document.querySelector('yt-avatar-shape');
-                if (avatarShape) {
-                    const gifElement = avatarShape.querySelector('#gif-element');
-                    if (!gifElement) {
-                        applyChannelAvatar(selectedAvatar);
-                    }
-                }
-            } else {
-                applyVideoAvatar(selectedAvatar);
-            }
-        }
-    }
-
-    //setInterval(checkAndApplyChannelAvatar, 500);
     init();
     window.addEventListener('load', init);
 })();
